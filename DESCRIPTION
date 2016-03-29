@@ -1,9 +1,9 @@
 Package: SpatFrontier
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Spatial Stochastic Frontiers
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: Thomas de Graaff
+Maintainer: Thomas de Graaff <t.de.graaff@vu.nlt>
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
 LazyData: TRUE
