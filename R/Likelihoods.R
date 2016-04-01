@@ -7,8 +7,6 @@
 #' @return The Log-likelihood
 #' 
 #' @import maxLik
-#'
-#' @examples
 #' 
 #' @export
 OlsFun <- function(param) {
