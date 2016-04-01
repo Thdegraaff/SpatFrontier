@@ -5,9 +5,12 @@
 #' @param param Vector of parameters to be inserted
 #'
 #' @return The Log-likelihood
-#' @export
+#' 
+#' @import maxLik
 #'
-#' @examples 
+#' @examples
+#' 
+#' @export
 OlsFun <- function(param) {
         sigma <- param[length(param)]
         sigma <- sqrt(sigma^2)

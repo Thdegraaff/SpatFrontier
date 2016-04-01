@@ -15,4 +15,7 @@ The Log-likelihood
 \description{
 Calculates the OLS likelihood given the parameters
 }
+\examples{
+
+}
 
