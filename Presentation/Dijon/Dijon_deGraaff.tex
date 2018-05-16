@@ -202,11 +202,11 @@ and $\nu$ and $\mu$ are independent of each other
 \begin{frame}{Tradional (econometric) approach}
 	For likelihood purposes one usually considers the composite stochastic variable $\epsilon = \nu - \mu$ en then find the marginal density of $\epsilon$:
 	%
-	\begin{eqnarray}
+	\begin{eqnarray*}
 	f(\epsilon)	&=& \int_0^\infty f(\mu, \epsilon)d\mu \notag\\
 	&=& \frac{2}{\sigma}\phi\left(\frac{\epsilon}{\sigma}\right)\Phi\left(-\frac{\epsilon\lambda}{\sigma}\right)
 	\label{likelihood}
-	\end{eqnarray}
+	\end{eqnarray*}
 	%
 	Technical efficiencies can be retrieved by $f(\mu|\epsilon)$. 
 \end{frame}
@@ -246,7 +246,7 @@ Note that $\mathbf{A} = \left(\mathbf{I} - \lambda\mathbf{W}\right)$ and $\mathb
 		\item Which has two types of genesis:
 		\begin{enumerate}
 			\item By convolution: $Z = \delta|U| + \sqrt{1-\delta^2}V$
-			\item By conditioning: $Z = (V|U<0)$
+			\item By conditioning: $Z = (V|U>0)$
 			\newline
 		\end{enumerate}
 		\pause
@@ -348,11 +348,39 @@ table[x=x,y=y5] {SkewNormalDensities.txt};
 \end{frame}
 
 \begin{frame}{Multivariate skew-normal distributions}
-
+\framesubtitle{Via conditioning}
+If we partition $Psi$ in component $U$ and $V$ of size 1 and $n$ respectively, such that:
+\begin{equation*}
+	\Psi = \begin{bmatrix}
+	U \\ V
+	\end{bmatrix} \sim N_{1+n}(0,\Sigma^*), \hspace{25pt} \Sigma^* = \begin{bmatrix}
+	1 & \delta^t \\
+	\delta & \Sigma
+	\end{bmatrix}
+\end{equation*}
+then:
+\begin{equation*}
+	Z = (V|U>0 )\sim SN_n(0,\Sigma, \alpha), \hspace{25pt} \alpha = (1-\delta^t \Sigma \delta)^\frac{1}{2} \sigma^{-1}\delta
+\end{equation*}
 \end{frame}
 
-\begin{frame}{Likelihood and technical efficiencies}
-	content...
+\begin{frame}{Combining spatial structure with stochastic frontiers}
+
+\begin{block}{For the spatial error model}
+	If the model is: $\ln y = \ln(\mathbf{X}) \beta \underbrace{- \mu +  \mathbf{A}^{-1}\nu}_\epsilon$ then
+	\begin{equation*}
+	\epsilon  \sim SN(\ln y - \ln(\mathbf{X}) \beta, \sigma^2 (\mathbf{A}^t \mathbf{A})^{-1}, \alpha)
+	\end{equation*}
+\end{block}
+
+\begin{block}{For the spatial ``lag'' model}
+	If the model is: $\ln y =  \mathbf{B}^{-1}\left[\ln(\mathbf{X}) \beta\right] \underbrace{ - \mu+ \mathbf{B}^{-1}\nu}_{\epsilon}$ then:
+	\begin{equation*}
+		\epsilon \sim  SN(\mathbf{B}^{-1}(\ln y - \mathbf{X}\beta), \sigma^2 (\mathbf{B}^t \mathbf{B})^{-1}, \alpha)
+	\end{equation*}
+\end{block}
+
+
 \end{frame}
 
 \section{Simulation}
@@ -471,7 +499,15 @@ table[x=x,y=y5] {SkewNormalDensities.txt};
 \subsection{Conclusion \& further research}
 
 \begin{frame}{In conclusion \& further research}
-
+\begin{itemize}
+	\item Introducing spatial structure in stochastic frontier models is possible and for some models relatively straightforward, but
+	\item Multivariate distribution of error term should be explicitly taken into account
+	\item Extension:
+	\begin{equation*}
+		\Psi   \sim \begin{pmatrix} U \\ V \end{pmatrix} \sim N_{d+n}\left(0,\Omega^\ast\right), \qquad \Omega^\ast=\begin{pmatrix} \Phi & \Delta' \\ \Delta & \Omega \end{pmatrix}.\notag
+	\end{equation*}
+	But then $Z =( V|U>0)$ becomes more complex and estimation requires Bayesian estimation in combination with simulation techniques
+\end{itemize}
 \end{frame}
 
 \end{document}

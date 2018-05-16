@@ -1,17 +1,16 @@
-\beamer@endinputifotherversion {3.10pt}
 \select@language {dutch}
-\beamer@sectionintoc {1}{Why bother?}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Background}{2}{0}{1}
-\beamer@subsectionintoc {1}{2}{Literature}{4}{0}{1}
-\beamer@sectionintoc {2}{Benchmarking regions}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{Frontiers in production}{7}{0}{2}
-\beamer@subsectionintoc {2}{2}{Stochastic frontiers}{8}{0}{2}
-\beamer@subsectionintoc {2}{3}{Skew-normal alternative}{9}{0}{2}
-\beamer@sectionintoc {3}{Benchmarking in the presence of networks}{17}{0}{3}
-\beamer@subsectionintoc {3}{1}{Main concept}{17}{0}{3}
-\beamer@subsectionintoc {3}{2}{Spatial frontiers}{19}{0}{3}
-\beamer@sectionintoc {4}{European regional efficiency}{22}{0}{4}
-\beamer@subsectionintoc {4}{1}{Data}{22}{0}{4}
-\beamer@subsectionintoc {4}{2}{Results}{23}{0}{4}
-\beamer@subsectionintoc {4}{3}{Regional efficiency}{25}{0}{4}
-\beamer@sectionintoc {5}{In conclusion}{31}{0}{5}
+\beamer@sectionintoc {1}{Why bother?}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Background}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Literature}{5}{0}{1}
+\beamer@sectionintoc {2}{Benchmarking regions}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Frontiers in production}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Stochastic frontiers}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Skew-normal alternative}{10}{0}{2}
+\beamer@sectionintoc {3}{Benchmarking in the presence of networks}{18}{0}{3}
+\beamer@subsectionintoc {3}{1}{Main concept}{18}{0}{3}
+\beamer@subsectionintoc {3}{2}{Spatial frontiers}{20}{0}{3}
+\beamer@sectionintoc {4}{European regional efficiency}{23}{0}{4}
+\beamer@subsectionintoc {4}{1}{Data}{23}{0}{4}
+\beamer@subsectionintoc {4}{2}{Results}{24}{0}{4}
+\beamer@subsectionintoc {4}{3}{Regional efficiency}{26}{0}{4}
+\beamer@sectionintoc {5}{In conclusion}{32}{0}{5}
