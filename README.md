@@ -11,4 +11,4 @@ About five or six years ago I started on this project, then let it rest for a wh
     - methodology, 
     - simulation, 
     - and a empirical application
-3. Presentation I gave on this in Marburg (2014)
+3. Presentation I gave on this in Marburg (2014) and the presentation to be presented in Dijon (2018)
