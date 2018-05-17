@@ -1,0 +1,1245 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nyt/global/}
+  \entry{AIGNER1977}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ADJ}{%
+         family={Aigner},
+         familyi={A\bibinitperiod},
+         given={D\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=LCAK}{%
+         family={Lovell},
+         familyi={L\bibinitperiod},
+         given={C\bibnamedelima A\bibnamedelima K},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+    }
+    \strng{namehash}{ADJ+1}
+    \strng{fullhash}{ADJLCAKSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1977}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{1}
+    \field{pages}{21\bibrangedash 37}
+    \field{title}{{Formulation and Estimation of Stochastic Production Frontier
+  Models}}
+    \field{volume}{6}
+    \field{journaltitle}{Journal of Econometrics}
+    \field{year}{1977}
+  \endentry
+
+  \entry{ALVAREZ2007}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Alvarez},
+         familyi={A\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \keyw{EFFICIENCY,Fixed
+  effects,Growth,IMPLEMENTATION,MODEL,PANEL,PANEL-DATA,PRODUCTIVITY,PRODUCTIVITY
+  GROWTH,Panel data,REGIONS,SPANISH REGIONS,STATES,Stochastic
+  frontier,TIME,TOTAL FACTOR PRODUCTIVITY,US,frontiers}
+    \strng{namehash}{AA1}
+    \strng{fullhash}{AA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{abstract}{%
+    The main contribution of this paper is the implementation of a new model
+  which combines the two parametric approaches most commonly used in the
+  productivity literature: fixed effects and stochastic frontiers. This allows
+  us to discuss whether it is better to use average or frontier functions to
+  estimate regional productivity. The empirical section uses panel data of
+  Spanish regions over the period 1980-1995. Additionally, we calculate and
+  decompose total factor productivity growth for the Spanish regions%
+    }
+    \field{issn}{0570-1864}
+    \field{number}{2}
+    \field{pages}{431\bibrangedash 441}
+    \field{title}{{Decomposing regional productivity growth using an aggregate
+  production frontier}}
+    \verb{url}
+    \verb ISI:000245889500010
+    \endverb
+    \field{volume}{41}
+    \list{location}{1}{%
+      {Univ Oviedo, Dept Econ, E-33071 Oviedo, Spain}%
+    }
+    \field{journaltitle}{Annals of Regional Science}
+    \field{month}{06}
+    \field{year}{2007}
+  \endentry
+
+  \entry{AREAL2010}{unpublished}{}
+    \name{author}{3}{}{%
+      {{hash=AFJ}{%
+         family={Areal},
+         familyi={A\bibinitperiod},
+         given={F\bibnamedelima J},
+         giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Balcombe},
+         familyi={B\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+      {{hash=TR}{%
+         family={Tiffin},
+         familyi={T\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+    }
+    \keyw{Dependence,Spatial,Spatial Dependence,Stochastic frontier}
+    \strng{namehash}{AFJ+1}
+    \strng{fullhash}{AFJBKTR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{{Integrating spatial dependence into stochastic frontier
+  analysis.}}
+    \list{location}{1}{%
+      {MPRA Paper No. 2496, Munich}%
+    }
+    \field{year}{2010}
+  \endentry
+
+  \entry{arellano2006unification}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AVRB}{%
+         family={Arellano-Valle},
+         familyi={A\bibinitperiod-V\bibinitperiod},
+         given={Reinaldo\bibnamedelima B},
+         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={Adelchi},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{AVRBAA1}
+    \strng{fullhash}{AVRBAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{3}
+    \field{pages}{561\bibrangedash 574}
+    \field{title}{On the Unification of Families of Skew-normal Distributions}
+    \field{volume}{33}
+    \field{journaltitle}{Scandinavian Journal of Statistics}
+    \field{year}{2006}
+  \endentry
+
+  \entry{arellano2008centred}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AVRB}{%
+         family={Arellano-Valle},
+         familyi={A\bibinitperiod-V\bibinitperiod},
+         given={Reinaldo\bibnamedelima B},
+         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={Adelchi},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{AVRBAA1}
+    \strng{fullhash}{AVRBAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{7}
+    \field{pages}{1362\bibrangedash 1382}
+    \field{title}{The centred parametrization for the multivariate skew-normal
+  distribution}
+    \field{volume}{99}
+    \field{journaltitle}{Journal of Multivariate Analysis}
+    \field{year}{2008}
+  \endentry
+
+  \entry{AZZALINI1985}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \keyw{TIME}
+    \strng{namehash}{AA2}
+    \strng{fullhash}{AA2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1985}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{issn}{0303-6898}
+    \field{number}{2}
+    \field{pages}{171\bibrangedash 178}
+    \field{title}{{A Class of Distributions Which Includes the Normal Ones}}
+    \verb{url}
+    \verb ISI:A1985ATM2200003
+    \endverb
+    \field{volume}{12}
+    \field{journaltitle}{Scandinavian Journal of Statistics}
+    \field{year}{1985}
+  \endentry
+
+  \entry{AZZALINI2005}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \strng{namehash}{AA2}
+    \strng{fullhash}{AA2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{159\bibrangedash 188}
+    \field{title}{{The Skew-normal Distribution and Related Multivariate
+  Families}}
+    \field{volume}{32}
+    \field{journaltitle}{Scandinavian Journal of Statistics}
+    \field{year}{2005}
+  \endentry
+
+  \entry{AZZALINI1999}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=CA}{%
+         family={Capitanio},
+         familyi={C\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \strng{namehash}{AACA1}
+    \strng{fullhash}{AACA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{3}
+    \field{pages}{579\bibrangedash 602}
+    \field{title}{{Statistical Application of the Multivariate Skew-Normal
+  distribution}}
+    \field{volume}{61}
+    \field{journaltitle}{Journal of Royal Statistical Society}
+    \field{year}{1999}
+  \endentry
+
+  \entry{AZZALINI1996}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=DA}{%
+         family={DallaValle},
+         familyi={D\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \keyw{DENSITIES,FAMILIES,Multivariate skew-normal distribution,bivariate
+  distribution,multivariate normal distribution,skew normal
+  distribution,skew-normal distribution,skewness,specified marginal}
+    \strng{namehash}{AADA1}
+    \strng{fullhash}{AADA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{abstract}{%
+    The paper extends earlier work on the so-called skew-normal distribution, a
+  family of distributions including the normal, but with an extra parameter
+  to-regulate skewness. The present work introduces a multivariate parametric
+  family such that the marginal densities are scalar skew-normal, and studies
+  its properties, with special emphasis on the bivariate case%
+    }
+    \field{issn}{0006-3444}
+    \field{number}{4}
+    \field{pages}{715\bibrangedash 726}
+    \field{title}{{The multivariate skew-normal distribution}}
+    \verb{url}
+    \verb ISI:A1996WE01900001
+    \endverb
+    \field{volume}{83}
+    \field{journaltitle}{Biometrika}
+    \field{month}{12}
+    \field{year}{1996}
+  \endentry
+
+  \entry{BARRIOS2010}{unpublished}{}
+    \name{author}{2}{}{%
+      {{hash=BEB}{%
+         family={Barrios},
+         familyi={B\bibinitperiod},
+         given={E\bibnamedelima B},
+         giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=LRF}{%
+         family={Ladado},
+         familyi={L\bibinitperiod},
+         given={R\bibnamedelima F},
+         giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \keyw{Spatial,Stochastic frontier}
+    \strng{namehash}{BEBLRF1}
+    \strng{fullhash}{BEBLRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{{Spatial Stochastic Frontier Models}}
+    \list{location}{1}{%
+      {Philippine Institute for Development Studies, discussion paper series
+  no. 2010-08}%
+    }
+    \field{year}{2010}
+  \endentry
+
+  \entry{BROCK1999}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BGJ}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={G\bibnamedelima J},
+         giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{CAPITAL-LABOR SUBSTITUTION,ECONOMIC-GROWTH,Fixed
+  effects,INDUSTRY,INEFFICIENCY,PANEL,PANEL-DATA,PRODUCTIVE
+  EFFICIENCY,PROGRESS,Panel data,REFORM,REGIONS,SOVIET-UNION,Siberia,TECHNICAL
+  INEFFICIENCY,TIME,X-EFFICIENCY,frontiers}
+    \strng{namehash}{BGJ1}
+    \strng{fullhash}{BGJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    Using 1971-90 panel data from a Siberian province, two econometric methods
+  are used side by side to examine technical inefficiency with a suggestion as
+  to how the methods might be used in sequence. Estimates derived from a random
+  effects method reveal that technical inefficiency is both substantial and not
+  time invariant. Results using either a random or fixed effects method suggest
+  that existing estimates of technical inefficiency in centrally planned
+  economies may be biased downward because of the choice of the estimation
+  method. Using either method, the increasing technical inefficiency found is
+  likely to be one cause of the decline in the performance of centrally planned
+  economies and their regions%
+    }
+    \field{issn}{0013-0451}
+    \field{number}{1}
+    \field{pages}{23\bibrangedash 44}
+    \field{title}{{Exploring a regional technical efficiency frontier in the
+  former USSR}}
+    \verb{url}
+    \verb ISI:000081050800002
+    \endverb
+    \field{volume}{32}
+    \list{location}{1}{%
+      {USAID, Program Econ Unit, Moscow, Russia}%
+    }
+    \field{journaltitle}{Economics of Planning}
+    \field{year}{1999}
+  \endentry
+
+  \entry{diamond1998guns}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DJM}{%
+         family={Diamond},
+         familyi={D\bibinitperiod},
+         given={Jared\bibnamedelima M},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Random House}%
+    }
+    \strng{namehash}{DJM1}
+    \strng{fullhash}{DJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Guns, germs and steel: a short history of everybody for the
+  last 13,000 years}
+    \field{year}{1998}
+  \endentry
+
+  \entry{molina2003skew}{unpublished}{}
+    \name{author}{3}{}{%
+      {{hash=DMJA}{%
+         family={Dominguez-Molina},
+         familyi={D\bibinitperiod-M\bibinitperiod},
+         given={J\bibnamedelima Armando},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GFG}{%
+         family={Gonz{\'a}lez-Farias},
+         familyi={G\bibinitperiod-F\bibinitperiod},
+         given={Graciela},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=RQR}{%
+         family={Ramos-Quiroga},
+         familyi={R\bibinitperiod-Q\bibinitperiod},
+         given={Rogelio},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DMJA+1}
+    \strng{fullhash}{DMJAGFGRQR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Skew-normality in stochastic frontier analysis}
+    \field{year}{2003}
+  \endentry
+
+  \entry{dominguez2007matrix}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DMJA}{%
+         family={Dominguez-Molina},
+         familyi={D\bibinitperiod-M\bibinitperiod},
+         given={J\bibnamedelima Armando},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GFG}{%
+         family={Gonz{\'a}lez-Farias},
+         familyi={G\bibinitperiod-F\bibinitperiod},
+         given={Graciela},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=RQR}{%
+         family={Ramos-Quiroga},
+         familyi={R\bibinitperiod-Q\bibinitperiod},
+         given={Rogelio},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Arjun\bibnamedelima K},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis}%
+    }
+    \strng{namehash}{DMJA+1}
+    \strng{fullhash}{DMJAGFGRQRGAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{9}
+    \field{pages}{1691\bibrangedash 1703}
+    \field{title}{A matrix variate closed skew-normal distribution with
+  applications to stochastic frontier analysis}
+    \field{volume}{36}
+    \field{journaltitle}{Communications in Statistics—Theory and Methods}
+    \field{year}{2007}
+  \endentry
+
+  \entry{FUJITA1999}{book}{}
+    \name{author}{3}{}{%
+      {{hash=FM}{%
+         family={Fujita},
+         familyi={F\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=KP}{%
+         family={Krugman},
+         familyi={K\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=VAJ}{%
+         family={Venables},
+         familyi={V\bibinitperiod},
+         given={A\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \strng{namehash}{FM+1}
+    \strng{fullhash}{FMKPVAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{{The Spatial Economy: Cities, Regions, and Economic Trade}}
+    \list{location}{1}{%
+      {Cambridge}%
+    }
+    \field{year}{1999}
+  \endentry
+
+  \entry{fusco2013spatial}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FE}{%
+         family={Fusco},
+         familyi={F\bibinitperiod},
+         given={Elisa},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=VF}{%
+         family={Vidoli},
+         familyi={V\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis}%
+    }
+    \strng{namehash}{FEVF1}
+    \strng{fullhash}{FEVF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{5}
+    \field{pages}{679\bibrangedash 694}
+    \field{title}{Spatial stochastic frontier models: controlling spatial
+  global and local heterogeneity}
+    \field{volume}{27}
+    \field{journaltitle}{International Review of Applied Economics}
+    \field{year}{2013}
+  \endentry
+
+  \entry{glass2013productivity}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GA}{%
+         family={Glass},
+         familyi={G\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kenjegalieva},
+         familyi={K\bibinitperiod},
+         given={Karligash},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PFJ}{%
+         family={Paez-Farrell},
+         familyi={P\bibinitperiod-F\bibinitperiod},
+         given={Juan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GA+1}
+    \strng{fullhash}{GAKKPFJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{3}
+    \field{pages}{291\bibrangedash 295}
+    \field{title}{Productivity growth decomposition using a spatial
+  autoregressive frontier model}
+    \field{volume}{119}
+    \field{journaltitle}{Economics Letters}
+    \field{year}{2013}
+  \endentry
+
+  \entry{glass2016spatial}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GAJ}{%
+         family={Glass},
+         familyi={G\bibinitperiod},
+         given={Anthony\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kenjegalieva},
+         familyi={K\bibinitperiod},
+         given={Karligash},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SRC}{%
+         family={Sickles},
+         familyi={S\bibinitperiod},
+         given={Robin\bibnamedelima C},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GAJ+1}
+    \strng{fullhash}{GAJKKSRC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{2}
+    \field{pages}{289\bibrangedash 300}
+    \field{title}{A spatial autoregressive stochastic frontier model for panel
+  data with asymmetric efficiency spillovers}
+    \field{volume}{190}
+    \field{journaltitle}{Journal of Econometrics}
+    \field{year}{2016}
+  \endentry
+
+  \entry{gupta2004multivariate}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GAK}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Arjun\bibnamedelima K},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=GFG}{%
+         family={Gonz{\'a}lez-Farias},
+         familyi={G\bibinitperiod-F\bibinitperiod},
+         given={Graciela},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=DMJA}{%
+         family={Dominguez-Molina},
+         familyi={D\bibinitperiod-M\bibinitperiod},
+         given={J\bibnamedelima Armando},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GAK+1}
+    \strng{fullhash}{GAKGFGDMJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{1}
+    \field{pages}{181\bibrangedash 190}
+    \field{title}{A multivariate skew normal distribution}
+    \field{volume}{89}
+    \field{journaltitle}{Journal of multivariate analysis}
+    \field{year}{2004}
+  \endentry
+
+  \entry{jiang2017energy}{article}{}
+    \name{author}{4}{}{%
+      {{hash=JL}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Lei},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FH}{%
+         family={Folmer},
+         familyi={F\bibinitperiod},
+         given={Henk},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={Minhe},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Jianjun},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{JL+1}
+    \strng{fullhash}{JLFHJMTJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{number}{2}
+    \field{pages}{301\bibrangedash 319}
+    \field{title}{Energy efficiency in the Chinese provinces: a fixed effects
+  stochastic frontier spatial Durbin error panel analysis}
+    \field{volume}{58}
+    \field{journaltitle}{The Annals of Regional Science}
+    \field{year}{2017}
+  \endentry
+
+  \entry{kinfu2015inefficiency}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KY}{%
+         family={Kinfu},
+         familyi={K\bibinitperiod},
+         given={Yohannes},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sawhney},
+         familyi={S\bibinitperiod},
+         given={Monika},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {BioMed Central}%
+    }
+    \strng{namehash}{KYSM1}
+    \strng{fullhash}{KYSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1}
+    \field{pages}{118}
+    \field{title}{Inefficiency, heterogeneity and spillover effects in maternal
+  care in India: a spatial stochastic frontier analysis}
+    \field{volume}{15}
+    \field{journaltitle}{BMC health services research}
+    \field{year}{2015}
+  \endentry
+
+  \entry{KUMBHAKAR2000}{book}{}
+    \name{author}{2}{}{%
+      {{hash=KSC}{%
+         family={Kumbhakar},
+         familyi={K\bibinitperiod},
+         given={S\bibnamedelima C},
+         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=KCA}{%
+         family={{Knox Lovell}},
+         familyi={K\bibinitperiod},
+         given={C\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{KSCKCA1}
+    \strng{fullhash}{KSCKCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2000}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{{Stochastic Fontier Analysis}}
+    \list{location}{1}{%
+      {Cambridge}%
+    }
+    \field{year}{2000}
+  \endentry
+
+  \entry{KUMBHAKAR2006}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KSC}{%
+         family={Kumbhakar},
+         familyi={K\bibinitperiod},
+         given={S\bibnamedelima C},
+         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=TEG}{%
+         family={Tsionas},
+         familyi={T\bibinitperiod},
+         given={E\bibnamedelima G},
+         giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \keyw{INEFFICIENCY,Likelihood,MODEL,MODELS,Stochastic frontier,TECHNICAL
+  INEFFICIENCY,TIME,input and output technical inefficiency,returns to
+  scale,technical change,translog production function}
+    \strng{namehash}{KSCTEG1}
+    \strng{fullhash}{KSCTEG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    This paper deals with estimation of input-oriented (IO) technical
+  inefficiency using a stochastic production frontier model. Econometrically
+  the model is similar to a class of models that arise in specifying technical
+  inefficiency in cost-minimizing and profit.-maximizing frameworks. The
+  standard maximum likelihood (ML) method that is used to estimate
+  output-oriented (OO) technical efficiency cannot be applied to estimate these
+  models. We use a simulated ML approach to estimate the IO production function
+  and compare results from the IO and OO models, mainly to emphasize the point
+  that estimated efficiency, returns to scale, technical change, etc., differ
+  depending on whether one uses the model with IO or OO technical inefficiency.
+  (c) 2005 Elsevier B.V. All rights reserved%
+    }
+    \field{issn}{0304-4076}
+    \field{number}{1}
+    \field{pages}{71\bibrangedash 96}
+    \field{title}{{Estimation of stochastic frontier production functions with
+  input-oriented technical efficiency}}
+    \verb{url}
+    \verb ISI:000239710900004
+    \endverb
+    \field{volume}{133}
+    \list{location}{1}{%
+      {SUNY Binghamton, Dept Econ, Binghamton, NY 13902 USA Athens Univ Econ \&
+  Business, Dept Econ, Athens 10434, Greece}%
+    }
+    \field{journaltitle}{Journal of Econometrics}
+    \field{month}{07}
+    \field{year}{2006}
+  \endentry
+
+  \entry{LANDES1998}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LDS}{%
+         family={Landes},
+         familyi={L\bibinitperiod},
+         given={D\bibnamedelima S},
+         giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {W.W. Norton}%
+      {Co.}%
+    }
+    \strng{namehash}{LDS1}
+    \strng{fullhash}{LDS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{The Wealth and Poverty of Nations: Why Some are So Rich and
+  Some so Poor}}
+    \list{location}{1}{%
+      {New York}%
+    }
+    \field{year}{1998}
+  \endentry
+
+  \entry{LESAGE2009}{book}{}
+    \name{author}{2}{}{%
+      {{hash=LJP}{%
+         family={LeSage},
+         familyi={L\bibinitperiod},
+         given={J\bibnamedelima P},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=PRK}{%
+         family={Pace},
+         familyi={P\bibinitperiod},
+         given={R\bibnamedelima K},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Chapman \& Hall/CRC}%
+    }
+    \keyw{ECONOMETRICS,Spatial,Spatial Econometrics}
+    \strng{namehash}{LJPPRK1}
+    \strng{fullhash}{LJPPRK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Introduction to Spatial Econometrics}}
+    \list{location}{1}{%
+      {Boca Raton}%
+    }
+    \field{year}{2009}
+  \endentry
+
+  \entry{MEEUSEN1977}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MW}{%
+         family={Meeusen},
+         familyi={M\bibinitperiod},
+         given={W},
+         giveni={W},
+      }}%
+      {{hash=vdBJ}{%
+         prefix={van\bibnamedelima den},
+         prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Broek},
+         familyi={B\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+    }
+    \strng{namehash}{MWBJvd1}
+    \strng{fullhash}{MWBJvd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1977}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{2}
+    \field{pages}{435\bibrangedash 444}
+    \field{title}{{Efficiency Estimation from Cobb-Douglas Production Functions
+  with Composed Error}}
+    \field{volume}{18}
+    \field{journaltitle}{International Economic Review}
+    \field{year}{1977}
+  \endentry
+
+  \entry{PAVLYUK2010}{unpublished}{}
+    \name{author}{1}{}{%
+      {{hash=PD}{%
+         family={Pavlyuk},
+         familyi={P\bibinitperiod},
+         given={D},
+         giveni={D},
+      }}%
+    }
+    \keyw{Competition,STATES,Spatial,Stochastic frontier}
+    \strng{namehash}{PD1}
+    \strng{fullhash}{PD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{{Regional Tourism Competition in the Baltic States: a Spatial
+  Stochastic Frontier Approach}}
+    \list{location}{1}{%
+      {MPRA Paper No. 25052, Munich}%
+    }
+    \field{year}{2010}
+  \endentry
+
+  \entry{puig2001technical}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PJJ}{%
+         family={Puig-Junoy},
+         familyi={P\bibinitperiod-J\bibinitperiod},
+         given={Jaume},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{PJJ1}
+    \strng{fullhash}{PJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{1}
+    \field{pages}{75\bibrangedash 96}
+    \field{title}{Technical inefficiency and public capital in US states: A
+  stochastic frontier approach}
+    \field{volume}{41}
+    \field{journaltitle}{Journal of Regional Science}
+    \field{year}{2001}
+  \endentry
+
+  \entry{puig2008some}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PJJ}{%
+         family={Puig-Junoy},
+         familyi={P\bibinitperiod-J\bibinitperiod},
+         given={Jaume},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Pinilla},
+         familyi={P\bibinitperiod},
+         given={Jaime},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SAGE Publications Sage UK: London, England}%
+    }
+    \strng{namehash}{PJJPJ1}
+    \strng{fullhash}{PJJPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{6}
+    \field{pages}{1129\bibrangedash 1142}
+    \field{title}{Why are some Spanish regions so much more efficient than
+  others?}
+    \field{volume}{26}
+    \field{journaltitle}{Environment and Planning C: Government and Policy}
+    \field{year}{2008}
+  \endentry
+
+  \entry{SCHMIDT2009}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SAM}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={A\bibnamedelima M},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MARB}{%
+         family={Moreira},
+         familyi={M\bibinitperiod},
+         given={A\bibnamedelima R\bibnamedelima B},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+      }}%
+      {{hash=HSM}{%
+         family={Helfand},
+         familyi={H\bibinitperiod},
+         given={S\bibnamedelima M},
+         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=FTCO}{%
+         family={Fonseca},
+         familyi={F\bibinitperiod},
+         given={T\bibnamedelima C\bibnamedelima O},
+         giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  O\bibinitperiod},
+      }}%
+    }
+    \keyw{Spatial}
+    \strng{namehash}{SAM+1}
+    \strng{fullhash}{SAMMARBHSMFTCO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{pages}{101\bibrangedash 112}
+    \field{title}{{Spatial stochastic frontier models: accounting for
+  unobserved local determinants of inefficiency}}
+    \field{volume}{31}
+    \field{journaltitle}{Journal of Productivity Analyses}
+    \field{year}{2009}
+  \endentry
+
+  \entry{WANG2010}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WHJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={H\bibnamedelima J},
+         giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HCW}{%
+         family={Ho},
+         familyi={H\bibinitperiod},
+         given={C\bibnamedelima W},
+         giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{CASH FLOW SENSITIVITIES,Consistency,FINANCING CONSTRAINTS,Fixed
+  effects,HETEROSCEDASTICITY,Heterogeneity,Investment,MODEL,MODELS,POLICY,Panel
+  data,Stochastic frontier models,TAIWAN,TECHNICAL INEFFICIENCY,TIME,stochastic
+  frontier model,transformation}
+    \strng{namehash}{WHJHCW1}
+    \strng{fullhash}{WHJHCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    Traditional panel stochastic frontier models do not distinguish between
+  unobserved individual heterogeneity and inefficiency. They thus force all
+  time-invariant individual heterogeneity into the estimated inefficiency.
+  Greene (2005) proposes a true fixed-effect stochastic frontier model which,
+  in theory, may be biased by the incidental parameters problem. The problem
+  usually cannot be dealt with by model transformations owing to the
+  nonlinearity of the stochastic frontier model. In this paper, we propose a
+  class of panel stochastic frontier models which create an exception. We show
+  that first-difference and within-transformation can be analytically performed
+  on this model to remove the fixed individual effects, and thus the estimator
+  is immune to the incidental parameters problem. Consistency of the estimator
+  is obtained by either N -> infinity or T -> infinity, which is an attractive
+  property for empirical researchers. (C) 2010 Elsevier B.V. All rights
+  reserved%
+    }
+    \field{issn}{0304-4076}
+    \field{number}{2}
+    \field{pages}{286\bibrangedash 296}
+    \field{title}{{Estimating fixed-effect panel stochastic frontier models by
+  model transformation}}
+    \verb{url}
+    \verb ISI:000280245200008
+    \endverb
+    \field{volume}{157}
+    \list{location}{1}{%
+      {Natl Taiwan Univ, Dept Econ, Taipei 100, Taiwan Acad Sinica, Inst Econ,
+  Taipei, Taiwan Ohio State Univ, Dept Econ, Columbus, OH 43210 USA}%
+    }
+    \field{journaltitle}{Journal of Econometrics}
+    \field{month}{08}
+    \field{year}{2010}
+  \endentry
+
+  \entry{WANG2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WWS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={W\bibnamedelima S},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+    }
+    \keyw{DENSITIES,Estimated inefficiency,Fixed
+  effects,INEFFICIENCY,MODEL,MODELS,PANEL-DATA,Panel data,Stochastic
+  frontier,Stochastic frontier models,TECHNICAL INEFFICIENCY,TIME,stochastic
+  frontier model}
+    \strng{namehash}{WWSSP1}
+    \strng{fullhash}{WWSSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    We consider a stochastic frontier model with error epsilon = v - u, where
+  nu is normal and it is half normal. We derive the distribution of the usual
+  estimate of u, E(u vertical bar epsilon). We show that as the variance of v
+  approaches zero, E(u vertical bar epsilon) - u converges to zero, while as
+  the variance of v approaches infinity, E(u vertical bar epsilon) converges to
+  E(u). We graph the density of E(u vertical bar epsilon) for intermediate
+  cases. To show that E(u vertical bar epsilon) is a shrinkage of u towards its
+  mean, we derive and graph the distribution of E(u vertical bar epsilon)
+  conditional on u. We also consider the distribution of estimated inefficiency
+  in the fixed-effects panel data setting. (C) 2008 Elsevier B.V. All rights
+  reserved%
+    }
+    \field{issn}{0304-4076}
+    \field{number}{1}
+    \field{pages}{36\bibrangedash 45}
+    \field{title}{{On the distribution of estimated technical efficiency in
+  stochastic frontier models}}
+    \verb{url}
+    \verb ISI:000263491000004
+    \endverb
+    \field{volume}{148}
+    \list{location}{1}{%
+      {Michigan State Univ, E Lansing, MI 48824 USA Yonsei Univ, Seoul, South
+  Korea}%
+    }
+    \field{journaltitle}{Journal of Econometrics}
+    \field{month}{01}
+    \field{year}{2009}
+  \endentry
+
+  \entry{WEINSTEIN1964}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WMA}{%
+         family={Weinstein},
+         familyi={W\bibinitperiod},
+         given={M\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WMA1}
+    \strng{fullhash}{WMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1964}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{number}{1}
+    \field{pages}{104\bibrangedash 105}
+    \field{title}{{The Sum of Values from a Normal and a Truncated Normal
+  Distribution}}
+    \field{volume}{6}
+    \field{journaltitle}{Technometrics}
+    \field{year}{1964}
+  \endentry
+\endsortlist
+\endinput
