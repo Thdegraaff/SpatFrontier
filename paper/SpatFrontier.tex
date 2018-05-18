@@ -23,7 +23,7 @@
 \usepackage{relsize}
 \usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
 
-\usepackage[style= authoryear-icomp, backend=bibtex,natbib=true, firstinits=true, uniquename=true,backref=false,doi=false,isbn=false,url=false,maxnames=2, maxbibnames=10, dashed =true]{biblatex}
+\usepackage[style= authoryear, backend=bibtex,natbib=true, firstinits=true, uniquename=true,backref=false,doi=false,isbn=false,url=false,maxnames=2, maxbibnames=10, dashed =true]{biblatex}
 \renewcommand*{\compcitedelim}{\addsemicolon\space}
 \renewbibmacro{in:}{}
 \setlength\bibhang{20pt}
@@ -191,30 +191,30 @@ y_i = f(X_i;\beta'){TE}{i},
 %
 where $X_i;$ is the vector of production factors, $\beta$ are the parameters of the Cobb-Douglas production function and ${TE}_i$ denotes the so-called firm specific technical efficiency. Thus, ${TE}_i$ is a distance measure of the firm to the (maximum) production of the best production firm there is -- \emph{within} the whole sample of firms. As a consequence ${TE}_i$ must be smaller or equal to one for each firm $i$.
 %
-\citet{AIGNER1977} and \citet{MEEUSEN1977} already specified (\ref{productionfrontier}) by assuming that $TE = \exp(-u_i)$, where $u_i$ represents a stochastic variable. If we now assume a loglinear specification, then we may assume the following econometric specification:
+\citet{AIGNER1977} and \citet{MEEUSEN1977} already specified (\ref{productionfrontier}) by assuming that $TE = \exp(-\mu_i)$, where $\mu_i$ represents a stochastic variable. If we now assume a loglinear specification, then we may assume the following econometric specification:
 %
 \begin{equation}
-\ln \left(y_i\right) = \ln({X}_i) \beta - u_i + v_i,
+\ln \left(y_i\right) = \ln({X}_i) \beta - \mu_i + \nu_i,
 \label{specification}
 \end{equation}
 %
-with $u_i$ being a stochastic variable as well, where $u\sim N(0,\sigma^2_u)$ and $v \sim N(0,\sigma^2_v)$ and with the explicit condition that $u_i > 0$. 
+with $\nu_i$ being the standard \emph{i.i.d.} nuisance term. Moreover, we assume $\mu\sim N(0,\sigma^2_\mu)$ and $\nu \sim N(0,\sigma^2_\nu)$ and apply the explicit condition that $\mu_i > 0$. 
 
-For likelihood purposes one usually considers the composite stochastic variable $\epsilon = v-u$. Further, usually both $u$ and $v$ are conveniently considered independent. This enables us to find the marginal density of $\epsilon$, namely:
+For likelihood purposes one usually considers the composite stochastic variable $\epsilon = \nu-\mu$. Further,both $\mu$ and $\nu$ are conveniently considered independent. This enables us to find the marginal density of $\epsilon$ for the univariate case, namely:
 %
 \begin{eqnarray}
-f(\epsilon)	&=& \int_0^\infty f(u, \epsilon)du \notag\\
+f(\epsilon)	&=& \int_0^\infty f(\mu, \epsilon)d\mu \notag\\
 						&=& \frac{2}{\sigma}\phi\left(\frac{\epsilon}{\sigma}\right)\Phi\left(-\frac{\epsilon\lambda}{\sigma}\right)
 \label{likelihood}
 \end{eqnarray}
 %
-where $\sigma_\epsilon = \sqrt{\sigma_u^2 + \sigma_v^2}$ and $\lambda = \frac{\sigma_u}{\sigma_v}$. Note that the marginal distribution of $\epsilon$ is a conditional distribution of $u$ and $v$ and that in the estimation $u$ and $v$ are intertwined by this conditional nature.\footnote{A different way of denoting this is to observe that we interested in the probability $\pi(v|u'>0)$ where $u'$ is now a normal normal variable.} Note further that an estimate of the technical efficiency can now be obtained by finding the distribution of $f(u|\epsilon)$. 
+where $\sigma_\epsilon = \sqrt{\sigma_\mu^2 + \sigma_\nu^2}$ and $\lambda = \frac{\sigma_\mu}{\sigma_\nu}$. Note that the marginal distribution of $\epsilon$ is a conditional distribution of $\mu$ and $\nu$ and that in the estimation $\mu$ and $\nu$ are intertwined by this conditional nature.\footnote{A different way of denoting this is to observe that we interested in the probability $\pi(\nu|\mu'>0)$ where $\mu'$ is now a standard normal variable.} Note further that an estimate of the technical efficiency can now be obtained by finding the distribution of $f(\mu|\epsilon)$. 
 
-Obviously, estimation of this model with ordinary least squares regression creates a bias because of the simultaneous appearance of the two stochastic variables with one being truncated at zero. The traditional estimation procedure uses a likelihood procedure based on the density in eqn. (\ref{likelihood}). However, introducing a more complex error structure in specification (\ref{specification}) is rather cumbersome and not very intuitive. The next subsection proposes however an alternative specification and corresponding estimation procedure, which is in our opinion more insightful and more straightforward to adapt.
+Obviously, estimation of this model with ordinary least squares regression creates a bias because of the simultaneous appearance of the two stochastic variables with one being truncated at zero. The traditional estimation procedure uses a likelihood procedure based on the density in eqn. (\ref{likelihood}). However, introducing a more complex, multivariate, error structure in specification (\ref{specification}) is cumbersome as integrating out $\mu$ from a multivariate density $f(\mu, \epsilon)$ is not straightforward. The next subsection, therefore, proposes an alternative specification and corresponding estimation procedure, which for the multivariate case feels more intuitive and is more straightforward to incorporate.
 %
 \subsection{A skew-normal approach}\label{sub:unisn}
 %
-The stochastic error structure, $\epsilon$, in specification (\ref{specification}) actually dates back to \citet{WEINSTEIN1964}, and can be rewritten in its most simple form as the sum of a normal and and a truncated normal distributed variable:
+The stochastic error structure, $\epsilon$, in specification (\ref{specification}) actually dates back to \citet{WEINSTEIN1964}, and can be rewritten in its most simple form as the sum of a normal and and a truncated normal distributed variable:\footnote{For ease of exposition we use the same symbols for the stochastic variables $\mu$ and $\nu$. However, the interpretation is this subsection is slightly different than in the previous subsection.}
 %
 \begin{equation}
 \epsilon = \delta|\mu| + \sqrt{1-\delta^2}\nu,
@@ -272,16 +272,16 @@ Apart from its relation with the normal distribution we will use for our applica
 %
 Note that in this case $\ln X\beta$, $\sigma^2$ and $\alpha$ can be seen as a location parameter, a scale parameter and a skewness parameter, respectively. 
 
-The direct relation between specification (\ref{specification}) and (\ref{SNunivariate}) can be seen as well through stating $\ln \left(y_i\right)  -\ln \left(X_i\right) \beta = \pi(v|u>0) = \epsilon$, where 
+The direct relation between specification (\ref{specification}) and (\ref{SNunivariate}) can be seen as well through stating $\ln \left(y_i\right)  -\ln \left(X_i\right) \beta = \pi(\nu|\mu>0) = \epsilon$, where 
 %
 \begin{equation}
 \epsilon =  \begin{pmatrix} u \\ v \end{pmatrix} \sim N\left(0,\Omega^\ast\right), \qquad \Omega^\ast=\begin{pmatrix} 1 & \delta' \\ \delta' & \sigma^2
 \end{pmatrix}, 
 \end{equation}
 %
-and where $\alpha = \delta/\sqrt{1-\delta^2}$, $\delta = \sigma_u$, and $\sqrt{1-\delta^2} \sigma_\epsilon=\sigma_v$. The latter equality signifies the intrinsic relation between $u$ and $v$ which is implicit in specification (\ref{specification}). Note that specification (\ref{specification}) only holds when $\delta < 0$. We do not explicitly impose this condition on the model, but choose to leave this as an empirical test. 
+and where $\alpha = \delta/\sqrt{1-\delta^2}$, $\delta = \sigma_\mu$, and $\sqrt{1-\delta^2} \sigma_\epsilon=\sigma_\nu$. The latter equality signifies the intrinsic relation between $\mu$ and $\nu$ which is implicit in specification (\ref{specification}). Note that the specification for a production function as in  (\ref{specification}) only holds when $\delta < 0$ (and thus $\alpha < 0$). For a stochastic cost frontier model the condition $\delta >0$ should hold. We do not explicitly impose this condition on the model, but choose to leave this as an empirical test. 
 
-Unfortunately, estimation of the density in (\ref{SNunivariate}) is a bit involved.\footnote{This basically is due to the fact that a direct estimation of the parameters is problematic around $\alpha = 0$. We therefore have to resolve to an alternative parametrization, the so-called centred parametrization \citep[see as well][]{ARELLANOVALLE2008}} When using maximum likelihood, the log-likelihood can be denoted as:
+Unfortunately, estimation of the density in (\ref{SNunivariate}) is a bit involved.\footnote{This basically is due to the fact that a direct estimation of the parameters is problematic around $\alpha = 0$. We therefore have to resolve to an alternative parametrization, the so-called centred parametrization \citep[see as well][]{arellano2008centred}} When using maximum likelihood, the log-likelihood can be denoted as:
 %
 \begin{equation}
 \ell\ell  = - \frac{n}{2}\ln \left(\pi \right) + n \ln \left( \frac{\sigma_\epsilon }{\sigma}\right) - 	\frac{1}{2}\sum_i{\epsilon _i^2} + 
@@ -296,73 +296,93 @@ where
 \label{eq:centeredparameters}
 \end{eqnarray}
 %
-Skew-normal distributions are not much used in econometrics, but for our purpose they will do very nicely.\footnote{Interestingly, the statistics literature mentions as a possible application of skew-normal distribution function the area of stochastic production frontier models. However, this has yet not permeated in the econometrics literature---although there is a nice R package that is able to deal with various forms of skew-normal and skew-t distribution functions, see \url{http://pbil.univ-lyon1.fr/library/sn/html/sn.html}. For more information about the skew-normal distribution function, see \url{http://azzalini.stat.unipd.it/SN}.} They allow us to use a single error term instead of a composite one, which has some benefits (such as clarity) when working with multivariate distributions. Moreover, the interpretation of the parameters seems as well more intuitive (using scale, location and skewness parameters). A disadvantage of using skew-normal distributions is the need to use a reparametrization of the parameters in order to estimate them properly.
+Skew-normal distributions are not much used in econometrics, but for our purpose they will do very nicely.\footnote{Interestingly, the statistics literature mentions as a possible application of skew-normal distribution function the area of stochastic production frontier models. However, this has yet not permeated in the econometrics literature---although there is an R package that is able to deal with various forms of univariate and multivariate skew-normal and skew-t distribution functions, althouhg not specifically geared towards the spatial domain \citep{packagesn}.} They allow us to use a single error term instead of a composite one, which has some benefits (such as clarity) when working with multivariate distributions. Moreover, the interpretation of the parameters seems as well more intuitive (using scale, location and skewness parameters). A disadvantage of using skew-normal distributions is the need to use a reparametrization of the parameters in order to estimate them properly.
 
 The next subsection introduces a multivariate variant of this distribution function and applies it to spatial autocorrelation in both the endogeneous variable and the residuals.
 %
 \section{Spatial stochastic production frontiers}\label{sub:multisn}
 %
-The extension of density (\ref{SNunivariate}) to a multivariate setting is rather straightforward and has already been documented extensively in, amongst others, \citet{AZZALINI1999} \citet{AZZALINI2005} and \citet{ARELLANOVALLE2006}. In this paper, we only concisely review the statistical framework needed for our application. To start with, we represent the underlying stochasting structure via conditioning. Assume that the $k$-dimensional variable $\epsilon $ is composited as $U$ + $V$ where $U$ has size 1 and $V$ has size $k$, respectively, such that:
+The extension of density (\ref{SNunivariate}) to a multivariate setting is rather straightforward and has already been documented extensively in, amongst others, \citet{AZZALINI1999} \citet{AZZALINI2005} and \citet{arellano2006unification}. In this paper, we only concisely review the statistical framework needed for our application. To start with, we represent the underlying stochasting structure via conditioning. Assume that the $k+1$-dimensional variable $\epsilon $ is composited as $U$ + $V$ where $U$ has size 1 and $V$ has size $k$, respectively, such that:
 \begin{equation}
-\epsilon   \sim \begin{pmatrix} U \\ V \end{pmatrix} \sim N_{1+k}\left(0,\Omega^\ast\right), \qquad \Omega^\ast=\begin{pmatrix} 1 & \delta' \\ \delta & \Omega \end{pmatrix}
+\epsilon   \sim \begin{pmatrix} U \\ V \end{pmatrix} \sim N_{1+k}\left(0,\mathbf{\Omega}^\ast\right), \qquad \mathbf{\Omega}^\ast=\begin{pmatrix} 1 & \delta' \\ \delta & \mathbf{\Omega} \end{pmatrix}
 \label{stocstruc}
 \end{equation}
-where $\Omega^\ast$ is a positive definite correlation matrix and -- for our purposes -- $\delta<0$, then 
+where $\mathbf{\Omega}^\ast$ is a positive definite correlation matrix and---for our purposes---$\delta<0$, then 
 \begin{equation}
-\epsilon  = (V|U >0) \sim SN(0, \Omega, \alpha), \qquad \alpha = (1- \delta'\Omega\delta)^{-1/2}\Omega^{-1}\delta.
+\epsilon  = (V|U >0) \sim SN(0, \mathbf{\Omega}, \alpha), \qquad \alpha = (1- \delta'\mathbf{\Omega}\delta)^{-1/2}\mathbf{\Omega}^{-1}\delta.
 \end{equation}
-Moreover, the affine transformation $\ln(y) = \ln \left(X \beta\right) + \sigma \epsilon $ leads to the following log-likelihood:
+Moreover, the affine transformation $\ln(y) = \ln \left(\mathbf{X} \beta\right) + \sigma \epsilon $ leads to the following log-likelihood:
 \begin{equation}
-\ell\ell  = -\frac{1}{2}n \ln |\Omega| - \frac{1}{2}n \text{tr} (\Omega^{-1}V) + 
- \varsigma_0 \left( \frac{\alpha}{\sigma} \left(\ln \left(y\right)  -\ln \left(X\right) \beta \right) \right),
+\ell\ell  = -\frac{1}{2}n \ln |\mathbf{\Omega}| - \frac{1}{2}n \text{tr} (\mathbf{\Omega}^{-1}\mathbf{\Xi}) + 
+ \varsigma_0 \left( \frac{\alpha}{\sigma} \left(\ln \left(y\right)  -\ln \left(\mathbf{X}\right) \beta \right) \right),
  \label{ll}
 \end{equation}
 where 
 \begin{eqnarray}
-V &=& n^{-1}\left(\ln \left(y\right)  -\ln \left(X\right) \beta \right)\left(\ln \left(y\right)  -\ln \left(X\right) \beta \right)', \notag \\
+\mathbf{\Xi} &=& n^{-1}\left(\ln \left(y\right)  -\ln \left(\mathbf{X}\right) \beta \right)\left(\ln \left(y\right)  -\ln \left(\mathbf{X}\right) \beta \right)', \notag \\
 \varsigma_0(x)&=&\ln(2\Phi(x). \notag
 \end{eqnarray}
 %
 Fortunately, opposite to the univariate case, a reparametrization of the parameters does not seem necessary for the multivariate case. 
 
-Introducing spatial dependence is now rather straightforward \citep[see for further elaboration][]{ANSELIN1988A}. Define $W$ as a spatial weight matrix, then the spatial autoregressive (SAR) frontier model can be expressed as:
-\begin{equation}
-\ln (y) = \rho W \ln(y) + \ln \left(X\right) \beta + \epsilon.
-\label{eq:SARfrontier}
-\end{equation}
-Model (\ref{eq:SARfrontier}) can also be expressed as: $\epsilon  \sim SN( \left(\ln \left(y\right)  -\rho W \ln(y) - \ln \left(X\right) \beta \right), \sigma \left(I - \rho W\right), \alpha)$. For further use, we refer to this model as a SAR frontier model.
+Introducing a spatial correlation structure depends on the exact specification of the spatial model  \citep[see for further elaboration][]{Anselin1988}. Assume that $\mathbf{A} = \left(\mathbf{I} - \lambda\mathbf{W}\right)$ and $\mathbf{B} = \left(\mathbf{I} - \rho\mathbf{W}\right)$. Then without being exhaustive the following typology can be made of combinations of a spatial correlation structure and stochastic frontier models:
 
-Correspondingly, a stochastic frontier model containing spatial dependence in the residuals (also known as a SEM model in the nomenclature of \citet{LESAGE2009}) can be denote as: 
-\begin{equation}
-\ln (y) = \ln \left(X\right) \beta + (I - \lambda W)^{-1}\epsilon,
-\label{eq:SEMfrontier}
-\end{equation}
-with the density function $\epsilon  \sim SN( \left(\ln \left(y\right) - \ln \left(X\right) \beta \right), \sigma \left(I - \lambda W\right), \alpha)$. We refer to this model as a SEM frontier model.
+	\begin{enumerate}
+	\item Introducing spatial dependence in the technical efficiency component $\mu$:
+	\begin{equation*}					
+	\ln y = \ln(\mathbf{X}) \beta \underbrace{- \mathbf{A}^{-1}\mu + \nu}_\epsilon
+	\end{equation*}
+	\item Introducing spatial dependence in the error term $\nu$:
+	\begin{equation*}					
+	\ln y = \ln(\mathbf{X}) \beta \underbrace{- u +  \mathbf{A}^{-1}\nu}_\epsilon
+	\end{equation*}
+	\item Introducing a spatial lag separate from technical efficiency component $\mu$:
+	\begin{equation*}					
+	\ln y =  \mathbf{B}^{-1}\left[\ln(\mathbf{X}) \beta\right] \underbrace{+ \mathbf{B}^{-1}\nu - \mu}_{\epsilon}
+	\end{equation*}
+	\item Introducing a spatial lag in combination with a technical efficiency component:
+	\begin{equation*}					
+	\ln y = \mathbf{B}^{-1}\left[\ln(\mathbf{X}) \beta \right]+  \underbrace{\mathbf{B}^{-1}\left[- \mu + \nu\right]}_\epsilon
+	\end{equation*}
+\end{enumerate}
+Note that model (3) is a bit artificial as it actually separates the spatial from the technical efficiency component. Ideally, one wants to estimate model (4) instead of model (3) when applying a spatial lag model. However, models (1) and (3) have a one-to-one correspondence with the stochastic error structure in equation (\ref{stocstruc}) and can be readily estimated by the maximizing the likelihood in of (\ref{ll}).
 
-Given the stochastic structure in (\ref{stocstruc}), both the SAR and SEM frontier models can now be readily estimated by the use of maximum likelihood methods---as long as the number of observations is not too large. Note that this specification allows us to separate spatial autocorrelation and technical efficiency effects.\footnote{A more complex specification where technical inefficiencies themselves are spatially dependent as well would be created by rewriting (\ref{stocstruc}) as:
+So, for the estimation of model (1)---a stochastic frontier model containing spatial dependence in the residuals (also known as a SEM model in the nomenclature of \citet{LESAGE2009})---we can just apply the density function:
+$$\epsilon  \sim SN( \left(\ln \left(y\right) - \ln \left(\mathbf{X}\right) \beta \right), \sigma \left(I - \lambda \mathbf{W}\right), \alpha)$$ 
+We refer to this model as a SEM frontier model.
+
+Correspondingly, when we want to estimate model (3), which is a strange type of spatial autoregressive (SAR) frontier model then I can express this as: 
+$$\epsilon  \sim SN( \left(\ln \left(y\right)  -\rho \mathbf{W} \ln(y) - \ln \left(\mathbf{X}\right) \beta \right), \sigma \left(I - \rho \mathbf{W}\right), \alpha)$$ 
+For further use, we refer to this model as a SAR frontier model.
+
+Given the stochastic structure in (\ref{stocstruc}), both the SAR and SEM frontier models can now be readily estimated by the use of maximum likelihood methods---as long as the number of observations is not too large. Note that this specification allows us to separate spatial autocorrelation and technical efficiency effects.\footnote{A more complex specification where technical inefficiencies themselves are spatially dependent---so, in this case that would be as models (2) and (4)---would be created by rewriting (\ref{stocstruc}) as:
 \begin{equation}
-\epsilon   \sim \begin{pmatrix} U \\ V \end{pmatrix} \sim N_{d+k}\left(0,\Omega^\ast\right), \qquad \Omega^\ast=\begin{pmatrix} \Phi & \Delta' \\ \Delta & \Omega \end{pmatrix}.\notag
+\epsilon   \sim \begin{pmatrix} U \\ V \end{pmatrix} \sim N_{d+k}\left(0,\mathbf{\Omega}^\ast\right), \qquad \mathbf{\Omega}^\ast=\begin{pmatrix} \mathbf{\Phi} & \mathbf{\Delta}' \\ \mathbf{\Delta} & \mathbf{\Omega} \end{pmatrix}.\notag
 \label{eq:fullomega}
 \end{equation}
-Such a stochastic structure, however, involves multivariate truncated normal distributions, which with large dimensions of $\Phi$ becomes infeasible to estimate with maximum likelihood procedures and need simulation techniques such as Monte Carlo Markov Chain procedures \citep[see as well][]{DOMINGUEZMOLINA2007}.} 
+Such a stochastic structure, however, involves multivariate truncated normal distributions, which with large dimensions of $\mathbf{\Phi}$ becomes infeasible to estimate with conventional maximum likelihood procedures and need simulation techniques such as Monte Carlo Markov Chain procedures \citep[see as well][]{dominguez2007matrix} or iterative methods such as EM algorithms \citep[see for a nice exposition][]{lin2009maximum}.}
 
 As mentioned above, finding technical (in)efficiencies resolves in finding the expectation of the distribution of $u|\epsilon$. This distribution can be denoted as:
 \begin{equation}
-u|\epsilon \sim N^c\left(\left(D'\Sigma^{-1}D+I\right)^{-1}D'\Sigma^{-1}e,
- \left(D'\Sigma^{-1}D+I\right)^{-1} \right)
+u|\epsilon \sim N^c\left(\left(\mathbf{D}'\mathbf{\Sigma}^{-1}\mathbf{D}+\mathbf{I}\right)^{-1}\mathbf{D}'\mathbf{\Sigma}^{-1}e,
+ \left(\mathbf{D}'\mathbf{\Sigma}^{-1}\mathbf{D}+\mathbf{I}\right)^{-1} \right)
 \label{eq:TE}
 \end{equation}
-where $N^c$ indicates a normal distribution truncated at $0$, $e$ a vector of realised residuals, $D$ is a diagonal matrix with $\delta$'s on the diagonal and $\Sigma$ equals $\sqrt{(I - D^2)}\Omega$. The expectation can now be readily derived. 
+where $N^c$ indicates a normal distribution truncated at $0$, $e$ a vector of realised residuals, $\mathbf{D}$ is a diagonal matrix with $\delta$'s on the diagonal and $\mathbf{\Sigma}$ equals $\sqrt{(\mathbf{I} - \mathbf{D}^2)}\mathbf{\Omega}$. The expectation can now be readily derived. 
 
 The next section offers an empirical application by looking at regional technical efficiency of various economic sectors in European NUTS-2 regions.
 %
+\section{Simulation}
+
+To be written.
+
 \section{The efficiency of European regions\label{sec:Applications}}
 %
 In this section we apply the concept of spatial stochastic frontiers to European NUTS-2 regional production functions. The next subsection first describes concisely the data, the subsequent subsection gives the estimation results, and the last subsection provides a discussion to put the results into perspective. 
 %
 \subsection{Data \& specification}
 %
-NUTS-2 (Nomenclature of Units for Territorial Statistics) is a geocode standard for referencing the subdivisions of European countries for statistical purposes, where the addition 2 stands for the geographical level of more or less provinces. We use the European regional database by Cambridge Econometrics: a database containing detailed sectoral information about regional gross value added, regional provision of labour, and regional investment. The data we use stems from 2010, although previous years are available as well and the economic sectors that they comprise are: agriculture, energy and manufacturing, construction, market services and non-market services. The countries we include in our estimation can be seen in Figure \ref{fig:GDPpc} and are basically all EU25 countries except for Romania and Bulgaria. 
+NUTS-2 (Nomenclature of Units for Territorial Statistics) is a geocode standard for referencing the subdivisions of European countries for statistical purposes, where the addition 2 stands for the geographical level of more or less provinces. We use the European regional database by Cambridge Econometrics: a database containing detailed sectoral information about regional gross value added, regional provision of labour, and regional investment. The data we use stems from 2010, although previous years are available as well and the economic sectors that they comprise are: agriculture, energy and manufacturing, construction, market services and non-market services. The countries we include in our estimation can be seen in Figure \ref{fig:gdppc} and are basically all EU25 countries except for Romania and Bulgaria. 
 
 To define our spatial weight matrix $W$, we use a $k$-nearest neighbour algoritm with $k = 4$, where the $k$-nearest neighbours get a weight of 1. The weights of all other neighbours are set at 0. Finally, we row-standardize $W$. 
 
@@ -382,7 +402,7 @@ The next subsection provides the results for various sectors and specifications 
 %
 \subsection{Results}
 %
-We start our estimation by pooling all sectors. 
+We first give the results for the energy and manufacturing sector. 
 %
 \begin{table}[h]
 \small
@@ -391,35 +411,46 @@ We start our estimation by pooling all sectors.
 \def\onepc{$^{\ast\ast}$} \def\fivepc{$^{\ast}$}
 \def\tenpc{$^{\dag}$}
 \def\legend{\multicolumn{8}{l}{\footnotesize{Significance levels
-:\hspace{1em} $\dag$ : 10\% \hspace{1em}
-$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
-\caption{Estimation results for all sectors combined ($N=256$)}
-\label{tab:results}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} l r @{\extracolsep{0pt}} l r @{} l r @{} l r @{} l} 
-\toprule
-\textbf{Variable} & \multicolumn{2}{c}{\textbf{OLS}}& \multicolumn{2}{c}{\textbf{Frontier}}& \multicolumn{2}{c}{\textbf{SAR frontier}}&\multicolumn{2}{c}{\textbf{SEM frontier}} \\ 
-& && \multicolumn{2}{c}{\textbf{model}}& \multicolumn{2}{c}{\textbf{model}}&\multicolumn{2}{c}{\textbf{model}} \\ 
-\midrule
-Const.						& -1.07	&\onepc &-0.82 	&\onepc &-1.44	&\onepc &-0.57	&\onepc\\
-$\ln K$  					&  1.10	&\onepc & 1.08	&\onepc & 1.03	&\onepc & 1.02	&\onepc\\
-$\ln L$ 					& -0.05	& 			&-0.04	&			 	&-0.00	& 			& 0.01  &\\
-$\sigma$					&  0.21	&\onepc & 0.30	&\onepc & 0.29	&\onepc & 0.26 	&\onepc\\
-$\alpha$					& 			&  			&-1.96	&\onepc &-2.01  &\onepc &-1.91	&\onepc\\
-$\rho$						&			 	&  			& 			& 			& 0.15	&\onepc & &\\
-$\lambda$					&			 	&  			& 			& 			& 			& 			& 0.49  &\onepc\\
-\midrule
-Log-l. 						&  0.12 & 			& 0.49 	& 			& 0.51	& 		  & 0.60 	& \\
-\bottomrule
-\legend
+			:\hspace{1em} $\dag$ : 10\% \hspace{1em}
+			$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
+\caption{Estimation for the energy and manufacturing sector ($N=256$ and standard errors between parentheses)}
+\label{tab:results}		
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}l D{.}{.}{3.5}@{} D{.}{.}{2.5}@{} D{.}{.}{2.5}@{} D{.}{.}{2.5}@{} D{.}{.}{2.5}@{} D{.}{.}{2.5}@{} }
+	\toprule
+	& \multicolumn{1}{c}{OLS} & \multicolumn{1}{c}{SEM} & \multicolumn{1}{c}{SAR} & \multicolumn{1}{c}{Frontier} & \multicolumn{1}{c}{SEM fr.} & \multicolumn{1}{c}{SAR fr.} \\
+	\midrule
+	Constant          & 2.40^{***} & 3.16^{***} & 0.46       & 2.50^{***}  & 4.03^{***}  & 0.49       \\
+	& (0.16)     & (0.14)     & (0.26)     & (0.18)      & (0.25)      & (1.22)     \\
+	$\ln$(Capital)    & 0.77^{***} & 0.58^{***} & 0.70^{***} & 0.76^{***}  & 0.58^{***}  & 0.70^{***} \\
+	& (0.03)     & (0.03)     & (0.03)     & (0.04)      & (0.03)      & (0.03)     \\
+	$\ln$(Employment) & 0.30^{***} & 0.44^{***} & 0.32^{***} & 0.30^{***}  & 0.44^{***}  & 0.32^{***} \\
+	& (0.03)     & (0.03)     & (0.03)     & (0.04)      & (0.03)      & (0.03)     \\
+	$\sigma$          & 0.33^{***} & 0.22^{***} & 0.29^{***} & 0.33^{***}  & 0.29^{***}  & 0.29^{*}   \\
+	& (0.01)     & (0.01)     & (0.01)     & (0.02)      & (0.02)      & (0.12)     \\
+	$\lambda$         &            & 0.79^{***} &            &             & 0.78^{***}  &            \\
+	&            & (0.09)     &            &             & (0.09)      &            \\
+	$\rho$            &            &            & 0.25^{***} &             &             & 0.25^{***} \\
+	&            &            & (0.03)     &             &             & (0.03)     \\
+	$\alpha$          &            &            &            & -1.75^{***} & -1.41^{***} & -0.13      \\
+	&            &            &            & (0.53)      & (0.37)      & (5.09)     \\
+	\midrule
+	Log Lik.          & -80.10     & 92.28      & 41.45      & 11.03       & 94.86       & 41.45      \\
+	\bottomrule
 \end{tabular*}
 \end{table}
 %
-Table \ref{tab:results} gives the results for various econometrics specifications. We start with the OLS estimation. Unfortunately, the factor rewards (or output elasticities) of $K$ and $L$ are not conform theory, although not significantly different from constant returns to scale. A frontier analysis does not alter those strange results, although the likelihood improves significantly. Finally, allowing for spatial dependence (whether that would be a SEM or a SAR frontier model) does not change the estimates of the factor rewards, considerably. However, it is clear that a SEM frontier model performs best in terms of log-likelihood. Moreover, a $\lambda$ of almost 0.5 indicates significant spatial dependence in the error terms, which should be reflected in the estimations of the regional technical efficiencies.
+Table \ref{tab:results} gives the results for various econometrics specifications. We start with the OLS estimation. Unfortunately, the factor rewards (or output elasticities) of $K$ and $L$ are not conform theory as usually the elasticity of $L$ is twice as large as $K$ and not vice-versa as it is now. However, they are not significantly different from a constant returns to scale specification. A frontier analysis does not alter these results, although the likelihood improves significantly. Finally, allowing for spatial dependence (whether that would be a SEM or a SAR frontier model) does not change the estimates of the factor reward considerably. However, it is clear that a SEM frontier model performs best in terms of log-likelihood. Moreover, a $\lambda$ of almost 0.8 indicates significant spatial dependence in the error term, which should be reflected in the estimations of the regional technical efficiencies.
 
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.8\textwidth]{fig/TEfrontierdiff}
+	\caption{Difference frontier vs. SEM frontier model for energy and manufacturing.}
+	\label{fig:TEfrontierdiff}
+\end{figure}
 
-Figure \ref{fig:TEDifference} shows the difference between the non-spatial technical efficiencies and the efficiencies, which are generated by a SEM frontier model. Clearly, the introduction of spatial dependence ensures that regions in the center become less efficient and regions in the periphery become more efficient (the distribution of technical efficiencies over regions becomes more homogeneous). In other words, regions in the periphery produce technically inefficient but less so when taking their geographical location into account. Thus, where regions are located matters just as their economic structure. 
+Figure \ref{fig:TEDifference} shows the difference between the non-spatial technical efficiencies and the efficiencies, which are generated by a SEM frontier model. Clearly, the introduction of spatial dependence ensures that regions in the center become less efficient and regions in the periphery become more efficient (the distribution of technical efficiencies over regions becomes more homogeneous). In other words, regions in the periphery produce technically inefficient but less so when taking their relative geographical location into account. Thus, where regions are located matters just as their economic structure. 
  
-Because the estimates off all sectors combined are still somewhat implausible, we turn to sectoral estimations in Table \ref{tab:resultssectors}, where we specify for each sector a SEM frontier model.\footnote{Checks with other specifications show that the SEM frontier model always performs best in terms of log-likelihood.}
+I continue with the SEM frontier model and turn to sectoral estimations in Table \ref{tab:resultssectors}, where I specify for each sector a SEM frontier model.\footnote{Checks with other specifications show that the SEM frontier model always performs best in terms of log-likelihood.}
 %
 \begin{table}[h]
 \small
@@ -427,98 +458,54 @@ Because the estimates off all sectors combined are still somewhat implausible, w
 \renewcommand\arraystretch{1.3}
 \def\onepc{$^{\ast\ast}$} \def\fivepc{$^{\ast}$}
 \def\tenpc{$^{\dag}$}
-\def\legend{\multicolumn{8}{l}{\footnotesize{Significance levels
-:\hspace{1em} $\dag$ : 10\% \hspace{1em}
-$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
-\caption{Estimation of SEM frontier models for separate sectors ($N=256$)}
-\label{tab:resultssectors}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}l r @{\extracolsep{0pt}} l r @{} l r @{} l r @{} l r @{} l}
-\toprule
-\textbf{Variable} & \multicolumn{2}{c}{\textbf{Agriculture}}& \multicolumn{2}{c}{\textbf{Energy and}}& \multicolumn{2}{c}{\textbf{Construction}}&\multicolumn{2}{c}{\textbf{Market }}&\multicolumn{2}{c}{\textbf{Non-market }} \\ 
-&& & \multicolumn{2}{c}{\textbf{manufacturing}}& &&\multicolumn{2}{c}{\textbf{services}}&\multicolumn{2}{c}{\textbf{services}} \\ 
-\midrule
-Const.			&  0.51	&\onepc & 0.10 	&			 	& 0.90	&\onepc &-1.08	&\onepc	& 0.29	& \\
-$\ln K$  		&  0.48	&\onepc & 0.82	&\onepc & 0.34	&\onepc & 0.79	&\onepc & 0.35	&\onepc\\
-$\ln L$ 		&  0.41	&\onepc	& 0.17	&\onepc	& 0.64	&\onepc	& 0.27  &\onepc & 0.67	&\onepc\\
-$\sigma$		&  0.65	&\onepc & 0.36	&\onepc & 0.60	&\onepc & 0.26 	&\onepc & 0.49	&\onepc\\
-$\alpha$		& -3.26	&\onepc	&-1.37	&\onepc &-3.44  &\onepc &-1.17	&\onepc &-3.45	&\onepc\\
-$\lambda$		&	 0.19	&\fivepc& 0.66	&\onepc	& 0.51	&\onepc	& 0.48  &\onepc & 0.55	&\onepc\\
-\midrule
-Log-l. 			&  -0.16& 			& 0.17 	& 			& -0.10	& 		  & 0.48 	& 			& 0.09 	& \\
-\bottomrule
-\legend
+\def\legend{\multicolumn{11}{l}{\footnotesize{Significance levels
+			:\hspace{1em} $\dag$ : 10\% \hspace{1em}
+			$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
+		\caption{Estimation of SEM frontier models for separate sectors ($N=256$ and standard errors between parentheses)}
+		\label{tab:resultssectors}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} l D{.}{.}{2.5}@{} D{.}{.}{2.5}@{} D{.}{.}{2.5}@{} D{.}{.}{3.5}@{} D{.}{.}{3.5}@{} D{.}{.}{3.5}@{} }
+	\toprule
+	& \multicolumn{1}{c}{Agric.} & \multicolumn{1}{c}{E \& M} & \multicolumn{1}{c}{Constr.} & \multicolumn{1}{c}{Distri.} & \multicolumn{1}{c}{Serv.} & \multicolumn{1}{c}{NM. Serv} \\
+	\midrule
+	Constant          & 2.43^{***} & 4.03^{***}  & 2.11^{***}  & 1.24^{***}  & 2.05^{***} & 1.74^{***}  \\
+	& (0.71)     & (0.25)      & (0.22)      & (0.17)      & (0.29)     & (0.19)      \\
+	$\ln$(Capital)    & 0.68^{***} & 0.58^{***}  & 0.61^{***}  & 0.69^{***}  & 0.71^{***} & 0.61^{***}  \\
+	& (0.03)     & (0.03)      & (0.04)      & (0.03)      & (0.03)     & (0.03)      \\
+	$\ln$(Employment) & 0.21^{***} & 0.44^{***}  & 0.39^{***}  & 0.30^{***}  & 0.29^{***} & 0.39^{***}  \\
+	& (0.03)     & (0.03)      & (0.04)      & (0.04)      & (0.03)     & (0.04)      \\
+	$\sigma$          & 0.26^{***} & 0.29^{***}  & 0.28^{***}  & 0.24^{***}  & 0.17^{***} & 0.25^{***}  \\
+	& (0.01)     & (0.02)      & (0.02)      & (0.02)      & (0.01)     & (0.02)      \\
+	$\alpha$          & -0.03      & -1.41^{***} & -1.19^{***} & -1.54^{***} & -0.02      & -1.68^{***} \\
+	& (1.44)     & (0.37)      & (0.29)      & (0.34)      & (0.75)     & (0.32)      \\
+	$\lambda$         & 0.57^{***} & 0.78^{***}  & 0.76^{***}  & 0.78^{***}  & 0.59^{***} & 0.81^{***}  \\
+	& (0.08)     & (0.09)      & (0.08)      & (0.08)      & (0.08)     & (0.08)      \\
+	\midrule
+	Log Lik.          & 62.92      & 94.86       & 94.19       & 149.78      & 164.88     & 143.52      \\
+	\bottomrule
 \end{tabular*}
 \end{table}
 %
+Note again that all output elasticities point to constant returns to scale. Energy and manufacturing seems to be the most capital intensive sector and non-market services the most labour intensive sector. The most skewed sectors, with $\alpha$'s around -3.5, and thus the sectors with the largest differences in regional efficiency are distribution and non-market services. Spatial dependence is in allmost all sectors---except perhaps agriculture and services---high with $\lambda$'s close to 0.8.
 
-The estimated factors rewards in Table \ref{tab:resultssectors} are much more in line with theory. Note that they all point to constant returns to scale. Energy and manufacturing seems to be the most capital intensive sector and non-market services the most labour intensive sector. The most skewed sectors, with $\alpha$'s around -3.5, and thus the sectors with the largest differences in regional efficiency are construction and non-market services. Spatial dependence is in allmost all sectors -- except agriculture -- rather high with $\lambda$'s between a half and a third.
+Figure \ref{fig:sectoralsfe} shows the maps of the estimated regional technical efficiencies provided by the estimates in Table \ref{tab:resultssectors}. Obviously, there are large differences in the regional distribution, but on average regions in the center of Europe seem to have larger technical efficiencies than regions in the periphery. Moreover, agriculture has on average a much larger regional technical efficiency than, e.g., market services, where regional differences are much more pronounced. 
 
-Figure \ref{fig:sectoralsfe} shows the maps of the estimated regional technical efficiencies provided by the estimates in Table \ref{tab:resultssectors}. Obviously, there are large differences in the regional distribution, but on average regions in the centre of Europe seem to have larger technical efficiencies than regions in the periphery. Moreover, agriculture has on average a much larger regional technical efficiency tham, e.g., market services, where regional differences are much more pronounced. 
+\begin{figure}[ht!]
 
-The next subsection aims to put these results into a somewhat wider perspective. 
-%
-\subsection{Discussion}
-%
-Introducing spatial dependence decreases the dispersion in regional technical efficiencies. In other words, it removes the extremes; the most inefficient regions become somewhat more efficient and the most efficient regions become slightly less efficient. Obviously, space matters as well in this case. 
-
-However, according to Figure \ref{fig:TEDifference} the impact of spatial dependence does not seem to be that large given the still large dispersion in technical efficiencies. This is probably caused by the quite restrictve Cobb-Douglas production function we use and the associated data.
-
-%
-\begin{table}[h]
-\small
-\caption{Five most efficient regions in each sector}
-\centering
-\renewcommand\arraystretch{1.3}
-\label{tab:topregions}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} ll @{}}
-\toprule
-\multicolumn{1}{c}{\sl Agriculture} &		\multicolumn{1}{c}{\sl Energy and manufacturing}	\\
-\midrule
-Algarve	& Southern and Easter Ireland \\
-Castilla y Leon	& iudad Aut\'onoma de Ceuta \\ 
-Notio Aigaio	& Ciudad Aut\'onoma de Melilla  \\
-Berlin				& Outer London \\
-Malta					& Groningen \\
-\addlinespace
-\midrule
-\multicolumn{1}{c}{\sl Construction} 	&		\multicolumn{1}{c}{\sl Market services} \\
-\midrule
-Voreio Aigaio	& Attiki \\
-Luxembourg & Luxembourg \\
-North Eastern Scotland & 	Dytiki Makedonia\\
-Southern and Easter	Ireland & Bremen \\
-Dresden	 & Stockholm \\
-\addlinespace
-\midrule
-\multicolumn{1}{c}{\sl Non-market services} 							\\
-\midrule
-Norra Mellansverige &\\
-Luxembourg&\\
-Friesland&\\
-Hovedstadsregio&\\
-Cheshire&\\
-\bottomrule
-\end{tabular*}
-\end{table}
-%
-To see this, Table \ref{tab:topregions} gives the most efficient regions for each sector given our parameter estimates. Although the general pattern seems to be fine, technical efficiency estimates for individual regions do not always seem to be appropriate, given the prevalence of, e.g., Greek regions in Table \ref{tab:topregions}. To be more specific, there are two general issues here that need to be adressed:
-\begin{description}
-\item[Spatial heterogeneity] It might very well be that there is still a large amount of regional variety present in the data. This might be taken into account by fixed effects or additional regional variables. Using fixed effects is not straightforward in a stochastic frontier model, however. Moreover, using both regional fixed effects and spatial dependence might cause an identification problem \citep[see, e.g.,][]{ANSELIN2002A}. 
-\item[Misspecification of the production function] Another issue is the misspecification of the production function. A Cobb-Douglas production function is very restrictive and one might feel more at ease with, e.g., a translog production function. Moreover, one rather important production factor is missing: namely, human capital. It is known that the estimates could be seriously biased \citep{MANKIW1992} when omitting human capital. 
-\end{description}
-%
-Probably, the most fruitful approach would be to incorporate additional variables (especially human capital). Unfortunately, our dataset does not contain such variables. However, we can use a recently devised regional input-output matrix, not to add more production factors, but to decompose our gross value added variable ($Y$), namely :
-\begin{equation}
-		Y = p(V^T - U) = \beta_0 K^{\beta_1}L^{\beta_2},
-\label{eq:IO}
-\end{equation}
-where $p$ is a price vector and $V$ and $U$ are make and use tables, respectively. This allows us to add more regional and sectoral variation in the estimation and would solve at least partly for both the spatial heterogeneity and the misspecification of the production function. Note however that using an input-output framework with its fixed shares only allow for a Cobb-Douglas production function.
+\subfigure[Agriculture]{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierAgr}}
+\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierEM}}\\[-2ex]
+\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierCon}}
+\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierDist}}\\
+\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierServ}}
+\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierNMServ}}
+\end{figure}
 %
 \section{In conclusion}
 %
-The main aim of this paper was to introduce spatial dependence in stochastic production frontier analysis. We did this by using a skew-normal distribution function approach, which we argue is s (\emph{i}) straightforward to use,  (\emph{ii}) able to separate spatial dependence and technical efficiencies, and  (\emph{iii}) produce consistent estimates. Moreover, we argue that the results can be interpreted in the view of relative and absolute geographic location. Obviously, there is more to this because technical efficiencies may be spatially dependend as well (for instance, there are spillovers in the adoption of new technology that improve the  efficiency or there are specific institutions, such as former guilds or unions, that prohibit the adoption of new technologies are spatially concentrated). However, when looking at the efficiency of regions, taking into account spatial dependence -- whether in the inefficiency part or not -- strongly improves the estimates of the tecnical efficiencies; in other words, they become less biased. 
+The main aim of this paper was to introduce spatial dependence in stochastic production frontier analysis. I did this by adopting a multi-variate skew-normal distribution function approach, which I argue is (\emph{i}) straightforward to estimate, (\emph{ii}) able to separate spatial dependence in the error term and technical efficiencies, and (\emph{iii}) produce consistent estimates. 
 
-When looking at European regions, taking spatial dependence into account controls more or less for the core-periphery pattern in Europe. Thus, regions in the periphery do not produce that inefficiently only because of their economic structure, but partly as well because of their location and the related diminished access to knowledge and information. Obviously, our estimations are a bit restrictive regarding the data and specification we use. Therefore, for immediate further research, we need to see whether we can use the information from a regional input-output table and mold that into a production function form, so that we at least remove some of the spatial heterogeneity and perhaps as well part of our misspecification issues. 
+Obviously, there is more to this because technical efficiencies may be spatially depend as well or they might be a general spatial lag process present. For instance, there are spillovers in the adoption of new technology that improve the efficiency or there are specific institutions, such as former guilds or unions, that prohibit the adoption of new technologies are spatially concentrated. However, when looking at the efficiency of regions, taking into account spatial dependence---whether in the inefficiency part or not---strongly improves the estimates of the technical efficiencies; in other words, they become less biased. However, estimating combinations of multivariate normal and multivariate truncated normal distributions require more complex estimation methods, whether in the form of estimation methods or expectation-maximization (EM) type of algorithms.
+
+When looking at European regions, taking spatial dependence into account controls more or less for the core-periphery pattern in Europe. Thus, regions in the periphery do not produce that inefficiently only because of their economic structure, but partly as well because of their location and the related diminished access to knowledge and information. Obviously, these estimations are a bit restrictive regarding the data and specification we use. But for illustration purposes they fit perfectly and point to the fact that peripheral regions are performing partly worse because of their remote location and decreased access to all kinds of networks.
 %
 \begin{spacing}{1.2}
 	\printbibliography

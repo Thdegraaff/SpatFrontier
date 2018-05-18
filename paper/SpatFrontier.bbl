@@ -101,6 +101,32 @@
     \field{year}{2007}
   \endentry
 
+  \entry{Anselin1988}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AL}{%
+         family={Anselin},
+         familyi={A\bibinitperiod},
+         given={Luc},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Kluwer Academic Publishers}%
+    }
+    \strng{namehash}{AL1}
+    \strng{fullhash}{AL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1988}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{{Spatial Econometrics: Methods and Models}}
+    \list{location}{1}{%
+      {Dordrecht}%
+    }
+    \field{year}{1988}
+  \endentry
+
   \entry{AREAL2010}{unpublished}{}
     \name{author}{3}{}{%
       {{hash=AFJ}{%
@@ -256,6 +282,33 @@
     \field{volume}{32}
     \field{journaltitle}{Scandinavian Journal of Statistics}
     \field{year}{2005}
+  \endentry
+
+  \entry{packagesn}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Azzalini},
+         familyi={A\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AA3}
+    \strng{fullhash}{AA3}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{The {R} package \texttt{sn}: The Skew-Normal and Related
+  Distributions such as the Skew-$t$ (version 1.5-2).}
+    \verb{url}
+    \verb http://azzalini.stat.unipd.it/SN
+    \endverb
+    \list{location}{1}{%
+      {Universit\`a di Padova, Italia}%
+    }
+    \field{year}{2018}
   \endentry
 
   \entry{AZZALINI1999}{article}{}
@@ -511,7 +564,7 @@
     \field{title}{A matrix variate closed skew-normal distribution with
   applications to stochastic frontier analysis}
     \field{volume}{36}
-    \field{journaltitle}{Communications in Statistics—Theory and Methods}
+    \field{journaltitle}{Communications in Statistics--Theory and Methods}
     \field{year}{2007}
   \endentry
 
@@ -932,6 +985,34 @@
     \list{location}{1}{%
       {Boca Raton}%
     }
+    \field{year}{2009}
+  \endentry
+
+  \entry{lin2009maximum}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LTI}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Tsung\bibnamedelima I},
+         giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LTI1}
+    \strng{fullhash}{LTI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{2}
+    \field{pages}{257\bibrangedash 265}
+    \field{title}{Maximum likelihood estimation for multivariate skew normal
+  mixture models}
+    \field{volume}{100}
+    \field{journaltitle}{Journal of Multivariate Analysis}
     \field{year}{2009}
   \endentry
 
