@@ -1181,6 +1181,68 @@
     \field{year}{2009}
   \endentry
 
+  \entry{Thissen2013b}{report}{}
+    \name{author}{2}{}{%
+      {{hash=TM}{%
+         family={Thissen},
+         familyi={T\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DD}{%
+         family={Diodato},
+         familyi={D\bibinitperiod},
+         given={Dario},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TMDD1}
+    \strng{fullhash}{TMDD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{extrayear}{1}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Trade between European Nuts2 Regions from 2000 to 2010}
+    \list{institution}{1}{%
+      {The Hague: The PBL Netherlands Environmental Assessment Agency}%
+    }
+    \field{type}{techreport}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Thissen2013}{report}{}
+    \name{author}{2}{}{%
+      {{hash=TM}{%
+         family={Thissen},
+         familyi={T\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DD}{%
+         family={Diodato},
+         familyi={D\bibinitperiod},
+         given={Dario},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TMDD1}
+    \strng{fullhash}{TMDD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{extrayear}{2}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Trade between European Nuts2 Regions in 2000}
+    \list{institution}{1}{%
+      {The Hague: The PBL Netherlands Environmental Assessment Agency}%
+    }
+    \field{type}{techreport}
+    \field{year}{2013}
+  \endentry
+
   \entry{WANG2010}{article}{}
     \name{author}{2}{}{%
       {{hash=WHJ}{%

@@ -10,7 +10,7 @@
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \makeatother
 
-\usepackage{amssymb, amsmath, amsthm, graphics, graphicx, longtable, setspace, makeidx, subfigure, marvosym, microtype, booktabs, tabularx,authblk, lipsum, siunitx, lmodern, makecell, rotating, pdflscape,fullpage, dcolumn}
+\usepackage{amssymb, amsmath, amsthm, graphics, graphicx, longtable, setspace, makeidx, subfig, marvosym, microtype, booktabs, tabularx,authblk, lipsum, siunitx, lmodern, makecell, rotating, pdflscape,fullpage, dcolumn}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows} 
@@ -57,7 +57,11 @@
 %\input{SSF-concordance}
 
 \title{\bfseries On spatial dependence in stochastic frontier models with an application to European regional economic performance}
-\author{Thomas de Graaff $^{a}$\thanks{Corresponding author. Tel +31 (0)20 5986092. Email: tgraaff@feweb.vu.nl. This paper is prepared for the 17$^{th}$ workshop on spatial econometrics and statistics in Dijon 2018. The author would like to thank Ferdinand Paraguas, Raymond Florax and Henri de Groot for useful comments on earlier versions of the paper.} \bigskip \ \ \ 
+\author{Thomas de Graaff $^{a}$\thanks{Corresponding author. Tel +31 (0)20
+    5986092. Email: \href{t.de.graaff@vu.nl}{t.de.graaff@vu.nl}. Paper, code and presentation can be found
+    on
+    \href{https://github.com/Thdegraaff/SpatFrontier}{https://github.com/Thdegraaff/SpatFrontier}.
+    This paper is prepared for the 17$^{th}$ workshop on spatial econometrics and statistics in Dijon 2018. The author would like to thank Ferdinand Paraguas, Raymond Florax and Henri de Groot for useful comments on earlier versions of the paper.} \bigskip \ \ \ 
 \and 
 {\small {$^{a}$ \emph{Department of Spatial Economics, Faculty of Economics and Business Adminstration}}} \\
 {\small {\emph{VU University, Amsterdam, The Netherlands}}} \bigskip \\
@@ -65,9 +69,20 @@
 
 \date{\today}
 \maketitle
+\clearpage
 
 \begin{abstract}
-\noindent In this paper it is argued that the diffusion of technology across regions is spatially restricted in nature. Thus, that a region's technical efficiency---its relative economic performance given its endowments---may depend more on regions nearby than on a `global' level of technology. We estimate these spatially related technical efficiencies by using a stochastic frontier model. Specifically, our contribution is twofold. First, we introduce spatial dependence in stochastic frontier models in a relative straightforward approach. Secondly, we argue that we are able to make a distinction between technical efficiencies related to the use of a region's endowments and those related to spatial dependence: in other words, between a region's absolute and a region's relative location. Using newly constructed regional data on European regional output, labor levels and especially capital level, our results indicate that European technical efficiencies are indeed very much spatially related.
+\noindent In this paper I argue that the diffusion of technology across regions
+is spatially restricted in nature. Thus, that a region's technical
+efficiency---its relative economic performance given its endowments---may depend
+more on regions nearby than on a `global' level of technology. We estimate these
+spatially related technical efficiencies by using a spatial stochastic frontier
+model, most notably we control for spatially correlated errors. Specifically, my
+contribution is threefoldt.  Using a relatively straightforward approach this
+study shows how to combine a spatial error structure with a stochastic frontier
+model that is (\emph{i}) straightforward to estimate, (\emph{ii}) able to
+separate spatial dependence in the error term and technical efficiencies, and
+(\emph{iii}) produce consistent estimates. So, I am able to make a distinction between technical efficiencies related to the use of a region's endowments and those related to spatial dependence: in other words, between a region's absolute and a region's relative location. Using newly constructed regional data on European regional output, labor levels and especially capital level, our results indicate that European technical efficiencies are indeed very much spatially related.
 \noindent 
 \newline
 \newline
@@ -76,10 +91,9 @@
 \end{abstract}
 \thispagestyle{empty}
 
-\clearpage
 \section{Introduction}
 %
-One of the most distinct features of European regions is that they differ widely in their economic performance, even when controlling for the number of inhabitants. Obviously, countries differ in terms of institutions, culture, stability, and so forth, which determine for a large part the international differences in economic performance. However, wealth and income are sometimes even more dispersed \emph{within} countries than across countries. To illustrate this, Figure \ref{fig:gdppc} show the dispersion of relative regional GDP per capital across European countries.
+One of the most distinct features of European regions is that they differ widely in their economic performance, even when controlling for the number of inhabitants. Obviously, countries differ in terms of institutions, culture, stability, and so forth, which determine for a large part the international differences in economic performance. However, wealth and income are sometimes even more dispersed \emph{within} countries than across countries. To illustrate this, Figure \ref{fig:gdppc} shows the dispersion of relative regional GDP per capital across European countries.
 
 \begin{figure}[h]
 	\center
@@ -94,7 +108,7 @@ What makes regions successful? This is probably the most crucial and complex res
 
 A strongly related research question deals with the exact nature of economic performance. How to define economic performance and how to measure it is still subject to an ongoing debate. Already numerous studies have conducted with the purpose of benchmarking cities, regions and the like. Usually, these studies are not based on any behavioral or economic structure. Further, although sometimes population size is taken into account, the level of other initial endowments is usually neglected. Ideally, the latter should be taken into account in the question whether regions are successful \emph{given} their initial situation. In the economics literature this can be reflected in the idea of stochastic frontier analysis. Here, firm performance is measured as the technical efficiency in their employment of production factors. The closer the firm's output is relative to the best possible output, the higher the firm's technical efficiency. Analogously, one can consider regions as production units (as is often done) and look at the region's technical efficiency in employing their endowments. As Figure \ref{fig:gdppc} clearly shows, some regions are probably more efficient than others---even within the same country. And this should be reflected when benchmarking those regions. 
 
-The left production isoquant in Figure \ref{fig:isoquants} shows how a region's technical efficiency can be measured. Denote $y$ as the \emph{given} maximum attainable production a region can get using the production factors $x_1$ and $x_2$. Regions $A_1, A_2, A_3, B_1, B_2$ and $B_3$ are all producing inefficiently. With the same amount of production factors $x_1$ and $x_2$ that theoretically enable them to produce $y$, they produce on average $\hat{y}$. The distance between $Y$ and $hat{y}$ is then a measure for the average efficiency. More precisely, efficiency is defined as the ratio $\vec{\hat{y}}/\vec{y}$ where  $\vec{y}$ is the length of the line between the origin and $y$. As a result, technical efficiencies must be smaller than 1. 
+The left production isoquant in Figure \ref{fig:isoquants} shows how a region's technical efficiency can be measured. Denote $y$ as the \emph{given} maximum attainable production a region can get using the production factors $x_1$ and $x_2$. Regions $A_1, A_2, A_3, B_1, B_2$ and $B_3$ are all producing inefficiently. With the same amount of production factors $x_1$ and $x_2$ that theoretically enable them to produce $y$, they produce on average $\hat{y}$. The distance between $Y$ and $\hat{y}$ is then a measure for the average efficiency. More precisely, efficiency is defined as the ratio $\vec{\hat{y}}/\vec{y}$ where  $\vec{y}$ is the length of the line between the origin and $y$. As a result, technical efficiencies must be smaller than 1. 
 
 \begin{figure}[t]
 \tikzstyle{backgroundB}=[circle, fill=blue!10,inner sep=0.5cm]
@@ -169,8 +183,15 @@ A specific criticism that applies to most of these (specifically parametric) stu
 
 In contrast this study applies a different multivariate approach firmly rooted in the statistical literature. Using a relatively straightforward approach this study shows how to combine a spatial error structure with a stochastic frontier model that is (\emph{i}) straightforward to estimate, (\emph{ii}) able to separate spatial dependence in the error term and technical efficiencies, and (\emph{iii}) produce consistent estimates. Moreover, I indicate how to incorporate more general spatial lag structures in stochastic frontier models. Estimation of these models, however, require simulation techniques.
 
-
-The remainder of this paper is structured as follows. The next section introduces the concept of regional technical efficiencies and discusses some measurement issues. Consecutively, it treats the modeling (and its associated estimation) of technical efficiencies in two ways: a mainly econometric and a more statistical one.\footnote{Actually, both modeling approaches date back to one common source: namely, \cite{WEINSTEIN1964}.} The third section deals with the introduction of spatial dependence in stochastic production frontiers. Section \ref{sec:Applications} provides an application of spatial stochastic frontier modeling and gives an estimation of the technical efficiencies of European NUTS2 regions in 2010. The last section concludes.
+The remainder of this paper is structured as follows. The next section
+introduces the concept of regional technical efficiencies and discusses some
+measurement issues. Consecutively, it treats the modeling (and its associated
+estimation) of technical efficiencies in two ways: a mainly econometric and a
+more statistical one.\footnote{Actually, both modeling approaches date back to
+  one common source: namely, \cite{WEINSTEIN1964}.} The third section deals with
+the introduction of spatial dependence in stochastic production frontiers.
+Section 4 provides simulation results to indicate the performmance of my
+estimation methods vis-\'{a}-vis other estimation methods. Section \ref{sec:Applications} provides an application of spatial stochastic frontier modeling and gives an estimation of the technical efficiencies of European NUTS2 regions in 2010. The last section concludes.
 %
 \section{Measuring technical inefficiencies}
 %
@@ -370,7 +391,8 @@ u|\epsilon \sim N^c\left(\left(\mathbf{D}'\mathbf{\Sigma}^{-1}\mathbf{D}+\mathbf
 \end{equation}
 where $N^c$ indicates a normal distribution truncated at $0$, $e$ a vector of realised residuals, $\mathbf{D}$ is a diagonal matrix with $\delta$'s on the diagonal and $\mathbf{\Sigma}$ equals $\sqrt{(\mathbf{I} - \mathbf{D}^2)}\mathbf{\Omega}$. The expectation can now be readily derived. 
 
-The next section offers an empirical application by looking at regional technical efficiency of various economic sectors in European NUTS-2 regions.
+The next section offers first a simulation to validate the consistency of our
+approach. Thereafter, I give an emprical application by looking at regional technical efficiency of various economic sectors in European NUTS-2 regions.
 %
 \section{Simulation}
 
@@ -378,31 +400,51 @@ To be written.
 
 \section{The efficiency of European regions\label{sec:Applications}}
 %
-In this section we apply the concept of spatial stochastic frontiers to European NUTS-2 regional production functions. The next subsection first describes concisely the data, the subsequent subsection gives the estimation results, and the last subsection provides a discussion to put the results into perspective. 
+In this section I apply the concept of spatial stochastic frontiers to European NUTS-2 regional production functions. The next subsection first describes concisely the data, the subsequent subsection gives the estimation results, and the last subsection provides a discussion to put the results into perspective. 
 %
 \subsection{Data \& specification}
 %
-NUTS-2 (Nomenclature of Units for Territorial Statistics) is a geocode standard for referencing the subdivisions of European countries for statistical purposes, where the addition 2 stands for the geographical level of more or less provinces. We use the European regional database by Cambridge Econometrics: a database containing detailed sectoral information about regional gross value added, regional provision of labour, and regional investment. The data we use stems from 2010, although previous years are available as well and the economic sectors that they comprise are: agriculture, energy and manufacturing, construction, market services and non-market services. The countries we include in our estimation can be seen in Figure \ref{fig:gdppc} and are basically all EU25 countries except for Romania and Bulgaria. 
+NUTS-2 (Nomenclature of Units for Territorial Statistics) is a geocode standard
+for referencing the subdivisions of European countries for statistical purposes,
+where the addition 2 stands for the geographical level of more or less
+provinces. I use two databases. First, I use the European regional database by
+Cambridge Econometrics: a database containing detailed sectoral information
+about regional gross value added, regional provision of labour. The data I use
+stems from 2010, although previous years are available as well and the economic
+sectors that they comprise are: agriculture, energy and manufacturing,
+construction, market services and non-market services. The countries I include
+in our estimation can be seen in Figure \ref{fig:gdppc} and are basically all
+EU25 countries except for Romania and Bulgaria. Secondly, I use a value added
+growth decomposition method based on an analyses of trade between European
+regions and the market shares on European regional markets to construct cappical
+stock. This method is implemented on the PBL multiregional Supply and Use tables \citep{Thissen2013b, Thissen2013} and gives region specific sources of economic growth. 
 
-To define our spatial weight matrix $W$, we use a $k$-nearest neighbour algoritm with $k = 4$, where the $k$-nearest neighbours get a weight of 1. The weights of all other neighbours are set at 0. Finally, we row-standardize $W$. 
+These supply and use tables provides me with the factor rewards for both labor
+and capital. This allows us to deal with one of the prevailing data problems in
+this literature: the calculation of the capital stock. Typically this is done
+with a perpetual inventory method. However, this could be problematic, since
+shocks in the capital stocks (e.g, by deaths or migrations of a firms) do not
+manifest themselves in the short run. Because there is information on regional
+value added of capital ($V^K$) across regions and sectors (so $V^K_{rs} =
+r_{rs} K_{rs}$), I can circumvent this problem by using data on sector
+specific interest rates for capital and thus calculate the capital stock per
+region and sector ($K_{rs}$).\footnote{Unfortunately but not surprising, I only have country specific interest rates instead of region specific.}
 
-These data allow us to estimate the following Cobb-Douglas function:
+
+To define our spatial weight matrix $W$, I use a $k$-nearest neighbour algoritm with $k = 4$, where the $k$-nearest neighbours get a weight of 1. The weights of all other neighbours are set at 0. Finally, I row-standardize $W$. 
+
+Finally, these data allows me to estimate the following Cobb-Douglas function:
 \begin{equation}
 \ln \left(Y_{rs}\right) = \beta_0 + \ln({L}_{rs}) \beta_1 + \ln({K}_{rs})\beta_2 + \epsilon_{rs},
 \label{eq:CD}
 \end{equation}
 where $Y$ is gross value added, $L$ the number of workers multiplied by the average hours worked per week, $K$ is the amount of capital, $r$ is the region, $s$ the sector, and $\epsilon$ an error term that can be distributed normally or (multivariate) skew-normally.
 
-Unfortunately, there is no precise data on capital stock for NUTS-2 levels. Therefore, we use an estimation of the capital stock based on the available investment data. Capital stock
-decreases by depreciation and increases by investments. By assuming that capital stock
-depreciates with 4\% per year and is increased with each year's investments, it is possible to
-generate an approximation of the regional capital stock on the long term. 
-
 The next subsection provides the results for various sectors and specifications of the production function of (\ref{eq:CD}). 
 %
 \subsection{Results}
 %
-We first give the results for the energy and manufacturing sector. 
+I first give the results for the energy and manufacturing sector. 
 %
 \begin{table}[h]
 \small
@@ -439,7 +481,19 @@ We first give the results for the energy and manufacturing sector.
 \end{tabular*}
 \end{table}
 %
-Table \ref{tab:results} gives the results for various econometrics specifications. We start with the OLS estimation. Unfortunately, the factor rewards (or output elasticities) of $K$ and $L$ are not conform theory as usually the elasticity of $L$ is twice as large as $K$ and not vice-versa as it is now. However, they are not significantly different from a constant returns to scale specification. A frontier analysis does not alter these results, although the likelihood improves significantly. Finally, allowing for spatial dependence (whether that would be a SEM or a SAR frontier model) does not change the estimates of the factor reward considerably. However, it is clear that a SEM frontier model performs best in terms of log-likelihood. Moreover, a $\lambda$ of almost 0.8 indicates significant spatial dependence in the error term, which should be reflected in the estimations of the regional technical efficiencies.
+Table \ref{tab:results} gives the results for various econometrics
+specifications. The first one is a straightforward OLS estimation.
+Unfortunately, the factor rewards (or output elasticities) of $K$ and $L$ are
+not conform theory as usually the elasticity of $L$ is twice as large as $K$ and
+not vice-versa as it is now. However, they are not significantly different from
+a constant returns to scale specification. Conventional spatial error and
+spatial lag models improve the likelihood significantly, indicating the presence
+of spatial correlation. A spatial error model seems to be the best model given
+the likelihood. A frontier analysis does not alter
+the OLS results, although the likelihood improves significantly. Finally,
+allowing for spatial dependence (whether that would be a SEM or a SAR frontier
+model) does not change the estimates of the factor rewards considerably
+vis-\'{a}-vis the conventional spatial models. However, it is clear that a SEM frontier model performs best in terms of log-likelihood. Moreover, a $\lambda$ of almost 0.8 indicates significant spatial dependence in the error term, which should be reflected in the estimations of the regional technical efficiencies.
 
 \begin{figure}[h]
 	\center
@@ -448,7 +502,7 @@ Table \ref{tab:results} gives the results for various econometrics specification
 	\label{fig:TEfrontierdiff}
 \end{figure}
 
-Figure \ref{fig:TEDifference} shows the difference between the non-spatial technical efficiencies and the efficiencies, which are generated by a SEM frontier model. Clearly, the introduction of spatial dependence ensures that regions in the center become less efficient and regions in the periphery become more efficient (the distribution of technical efficiencies over regions becomes more homogeneous). In other words, regions in the periphery produce technically inefficient but less so when taking their relative geographical location into account. Thus, where regions are located matters just as their economic structure. 
+Figure \ref{fig:TEfrontierdiff} shows the difference between the non-spatial technical efficiencies and the efficiencies, which are generated by a SEM frontier model. Clearly, the introduction of spatial dependence ensures that regions in the center become less efficient and regions in the periphery become more efficient (the distribution of technical efficiencies over regions becomes more homogeneous). In other words, regions in the periphery produce technically inefficient but less so when taking their relative geographical location into account. Thus, where regions are located matters just as their economic structure. 
  
 I continue with the SEM frontier model and turn to sectoral estimations in Table \ref{tab:resultssectors}, where I specify for each sector a SEM frontier model.\footnote{Checks with other specifications show that the SEM frontier model always performs best in terms of log-likelihood.}
 %
@@ -485,27 +539,53 @@ I continue with the SEM frontier model and turn to sectoral estimations in Table
 \end{tabular*}
 \end{table}
 %
-Note again that all output elasticities point to constant returns to scale. Energy and manufacturing seems to be the most capital intensive sector and non-market services the most labour intensive sector. The most skewed sectors, with $\alpha$'s around -3.5, and thus the sectors with the largest differences in regional efficiency are distribution and non-market services. Spatial dependence is in allmost all sectors---except perhaps agriculture and services---high with $\lambda$'s close to 0.8.
+Note again that all output elasticities point to constant returns to scale. Energy and manufacturing seems to be the most capital intensive sector and non-market services the most labour intensive sector. The most skewed sectors, with $\alpha$'s around $-1.6$, and thus the sectors with the largest differences in regional efficiency are distribution and non-market services. Spatial dependence is in allmost all sectors---except perhaps agriculture and services---high with $\lambda$'s close to 0.8.
 
-Figure \ref{fig:sectoralsfe} shows the maps of the estimated regional technical efficiencies provided by the estimates in Table \ref{tab:resultssectors}. Obviously, there are large differences in the regional distribution, but on average regions in the center of Europe seem to have larger technical efficiencies than regions in the periphery. Moreover, agriculture has on average a much larger regional technical efficiency than, e.g., market services, where regional differences are much more pronounced. 
+Figure \ref{fig:sectoralsfe} shows the maps of the estimated regional technical
+efficiencies provided by the estimates in Table \ref{tab:resultssectors}.
+Obviously, there are large differences in the regional distribution of technical
+efficiencies, but on average regions in the center of Europe seem to have larger
+technical efficiencies than regions in the periphery. Moreover, agriculture has
+on average a much more homogeneous regional technical efficiency than, e.g.,
+construction or distribution, where regional differences are much more pronounced. 
 
 \begin{figure}[ht!]
 
-\subfigure[Agriculture]{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierAgr}}
-\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierEM}}\\[-2ex]
-\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierCon}}
-\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierDist}}\\
-\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierServ}}
-\subfigure{\includegraphics[width = 0.48\textwidth]{fig/TEfrontierNMServ}}
+\subfloat[Agriculture]{\includegraphics[width = 0.45\textwidth]{fig/TEfrontierAgr}}
+\subfloat[Energy \& manufacturing]{\includegraphics[width = 0.45\textwidth]{fig/TEfrontierEM}}\\[-5ex]
+\subfloat[Construction]{\includegraphics[width = 0.45\textwidth]{fig/TEfrontierCon}}
+\subfloat[Distribution]{\includegraphics[width = 0.45\textwidth]{fig/TEfrontierDist}}\\[-5ex]
+\subfloat[Services]{\includegraphics[width = 0.45\textwidth]{fig/TEfrontierServ}}
+\subfloat[Non-market services]{\includegraphics[width = 0.45\textwidth]{fig/TEfrontierNMServ}}
+\caption{Technical efficiencies across Europe for 6 sectors}
+\label{fig:sectoralsfe}
 \end{figure}
 %
 \section{In conclusion}
 %
 The main aim of this paper was to introduce spatial dependence in stochastic production frontier analysis. I did this by adopting a multi-variate skew-normal distribution function approach, which I argue is (\emph{i}) straightforward to estimate, (\emph{ii}) able to separate spatial dependence in the error term and technical efficiencies, and (\emph{iii}) produce consistent estimates. 
 
-Obviously, there is more to this because technical efficiencies may be spatially depend as well or they might be a general spatial lag process present. For instance, there are spillovers in the adoption of new technology that improve the efficiency or there are specific institutions, such as former guilds or unions, that prohibit the adoption of new technologies are spatially concentrated. However, when looking at the efficiency of regions, taking into account spatial dependence---whether in the inefficiency part or not---strongly improves the estimates of the technical efficiencies; in other words, they become less biased. However, estimating combinations of multivariate normal and multivariate truncated normal distributions require more complex estimation methods, whether in the form of estimation methods or expectation-maximization (EM) type of algorithms.
+Obviously, there is more to this because technical efficiencies may be spatially
+depend as well or there might be a general spatial lag process present. For
+instance, there are spillovers in the adoption of new technology that improve
+the efficiency or there are specific institutions, such as former guilds or
+unions, that prohibit the adoption of new technologies are spatially
+concentrated. However, when looking at the efficiency of regions, taking into
+account spatial dependence---whether in the inefficiency part or not---strongly
+improves the estimates of the technical efficiencies; in other words, they
+become less biased. However, estimating combinations of multivariate normal and
+multivariate truncated normal distributions require more complex estimation
+methods, whether in the form of simulation estimation methods or expectation-maximization (EM) type of algorithms.
 
-When looking at European regions, taking spatial dependence into account controls more or less for the core-periphery pattern in Europe. Thus, regions in the periphery do not produce that inefficiently only because of their economic structure, but partly as well because of their location and the related diminished access to knowledge and information. Obviously, these estimations are a bit restrictive regarding the data and specification we use. But for illustration purposes they fit perfectly and point to the fact that peripheral regions are performing partly worse because of their remote location and decreased access to all kinds of networks.
+When looking at European regions, taking spatial dependence into account
+controls to a certain extent for the core-periphery pattern in Europe. Thus,
+regions in the periphery do not produce that inefficiently only because of their
+economic structure, but partly as well because of their location and the related
+diminished access to knowledge and information. Obviously, these estimations are
+restrictive regarding the data and specification I use. But for illustration
+purposes they fit perfectly and point to the fact that peripheral regions are
+performing partly worse because of their remote location and decreased access to
+all sorts of networks.
 %
 \begin{spacing}{1.2}
 	\printbibliography
