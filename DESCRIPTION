@@ -2,7 +2,7 @@ Package: SpatFrontier
 Type: Package
 Title: Spatial Stochastic Frontier Models
 Version: 0.1.1
-Author: Thomas de Graaff <t.de.graaff@vu.nl>
+Authors@R: person("Thomas","de Graaff", role = c("aut", "cre"), email = "t.de.graaff@vu.nl")
 Maintainer: Thomas de Graaff <t.de.graaff@vu.nl>
 Description: This pakages estimates frontiers models and technical efficiencies in the presence of spatial dependence.
 Imports: maxLik
