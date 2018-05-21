@@ -11,17 +11,18 @@
 #' @export
 #'
 #' @examples
-spatial_frontier <- function(formula, data = NULL, data_w = NULL, frontier = FALSE)
+spatial_frontier <- function(formula, data = NULL, data_w = NULL, frontier = TRUE)
 {
   mf <- model.frame(formula, data)
   y <- model.response(mf)
-  x <- model.matrix(x)
+  x <- model.matrix(mf)
+  x <- as.matrix(x)
+  names_x <- dimnames(x)[[2]]
   w <- as.matrix(data_w)
 
   # Error messages
   if(!is.vector(y)) stop("y is not a vector")
-  if(!is.data.frame(x)) stop("x is not a data frame")
   if(length(y) != nrow(x)) stop("x and y lengths differ")
 
-  spatial_frontier_fit(y = y, x = x, w=w, fr = frontier)
+  spatial_frontier_fit(y = y, x = x, w=w, fr = TRUE)
 }

@@ -4,7 +4,7 @@
 \alias{spatial_frontier}
 \title{spatial_frontier}
 \usage{
-spatial_frontier(formula, data = NULL, data_w = NULL, frontier = FALSE)
+spatial_frontier(formula, data = NULL, data_w = NULL, frontier = TRUE)
 }
 \arguments{
 \item{formula}{Model formula}

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • SpatFrontier</title>
+<title>Spatial error frontier distribution — spatial_error_frontier_fun • SpatFrontier</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -28,7 +28,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Spatial error frontier distribution — spatial_error_frontier_fun" />
+
+<meta property="og:description" content="Spatial error frontier distribution" />
+<meta name="twitter:card" content="summary" />
 
 
 <!-- mathjax -->
@@ -43,7 +46,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -89,59 +92,50 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Spatial error frontier distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Thdegraaff/SpatFrontier/blob/master/R/spatial_error_frontier_fun.R'><code>R/spatial_error_frontier_fun.R</code></a></small>
+    <div class="hidden name"><code>spatial_error_frontier_fun.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Spatial error frontier distribution</p>
+    
+    </div>
 
-    <colgroup>
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        <!--  -->
-        <td>
-          <p><code><a href="SpatFrontier.html">SpatFrontier</a></code> </p>
-        </td>
-        <td><p>SpatFrontier: a package for the estimation of spatial frontier models</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="ols_fun.html">ols_fun()</a></code> </p>
-        </td>
-        <td><p>OLS Log-likelihood</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="spatial_error_frontier_fun.html">spatial_error_frontier_fun()</a></code> </p>
-        </td>
-        <td><p>Spatial error frontier distribution</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="spatial_frontier.html">spatial_frontier()</a></code> </p>
-        </td>
-        <td><p>spatial_frontier</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>spatial_error_frontier_fun</span>(<span class='no'>y</span>, <span class='no'>X</span>, <span class='no'>param</span>, <span class='no'>W</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>y</th>
+      <td><p>The endogeneous variable</p></td>
+    </tr>
+    <tr>
+      <th>X</th>
+      <td><p>The dataframe</p></td>
+    </tr>
+    <tr>
+      <th>param</th>
+      <td><p>The parameters to be estimated</p></td>
+    </tr>
+    <tr>
+      <th>W</th>
+      <td><p>The spatial weight matrix</p></td>
+    </tr>
     </table>
-  </div>
+    
 
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
-    </ul>
+      <li><a href="#arguments">Arguments</a></li>
+                </ul>
+
   </div>
 </div>
 
