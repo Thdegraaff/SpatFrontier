@@ -17,7 +17,7 @@
 \usepackage{booktabs, dcolumn}
 
 \usepackage{tikz}
-\usetikzlibrary{arrows, shapes} 
+\usetikzlibrary{arrows, shapes}
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{fit}
 \usepackage{pgfplots}
@@ -38,12 +38,12 @@
 	pdftitle={Spatial Stochastic Frontier Models},
 	pdfkeywords={},
 	pdfsubject={},
-	pdfcreator={Emacs 25.2.1 (Org mode 9.0.10)}, 
+	pdfcreator={Emacs 25.2.1 (Org mode 9.0.10)},
 	pdflang={English}}
 \begin{document}
-	
+
 \maketitle
-	
+
 \section{Why bother?}
 
 \subsection{Regional economic performance}
@@ -79,7 +79,7 @@
 		region/.style={circle, fill=black, minimum size=4pt, inner sep=0pt, outer sep=-1pt},
 		]
 
-	\draw[axis,<->] (5,0) node(xline)[below] {$x_1$} - | 
+	\draw[axis,<->] (5,0) node(xline)[below] {$x_1$} - |
 				(0,5) node(yline)[left]{$x_2$};
 	\draw[frontier] (1.5,5) to[out=270,in=180] (5,1.5)node[right] {$y$}  ;
 	\node (A1) [region,label=above:$A_1$] at (1,4.2) {};
@@ -89,10 +89,10 @@
 	\node (B1) [region,label=above:$B_1$] at (0.5,2.9) {};
 	\node (B2) [region,label=above:$B_2$] at (1.4,1.4) {};
 	\node (B3) [region,label=above:$B_3$] at (2.75,0.85) {};
-	\draw[->, black!50, >=stealth'] (0,0) -- (3.05,2.05);	
+	\draw[->, black!50, >=stealth'] (0,0) -- (3.05,2.05);
 	\draw[->, very thick, black, >=stealth'] (2.2,1.48) -- (3.05,2.05)
-		node[sloped, above, midway] {$TE$};		
-			
+		node[sloped, above, midway] {$TE$};
+
 \end{tikzpicture}
 
 \end{center}
@@ -113,30 +113,30 @@
 	\draw[frontier] (7.5,5) to[out=270,in=180]  (11,1.5) node[right] {$y$};
 	\node (A11) [region,label=above:$A_1$] at (7,4.2) {};
 	\node (A21) [region,label=above:$A_2$] at (8,2.5) {};
-	\node (A31) [region,label=below:$A_3$] at (9.5,1.2) {};	
+	\node (A31) [region,label=below:$A_3$] at (9.5,1.2) {};
 	\draw[frontier, black!30, dashed] (6.5,5) to[out=270,in=180] (11,0.5) node[right] {$\hat{y}$};
 	\draw[frontier, red!80, dashed] (7,5) to[out=270,in=180] (11,0.75) node[right] {$\hat{y_A}$};
 	\draw[frontier, blue!80, dashed] (6.1,5) to[out=270,in=180] (11,0.2) node[right] {$\hat{y_B}$};
 	\node (B11) [region,label=above:$B_1$] at (6.5,2.9) {};
 	\node (B21) [region,label=above:$B_2$] at (7.4,1.4) {};
-	\node (B31) [region,label=above:$B_3$] at (8.75,0.85) {};		
-	\draw[->, black!30, >=stealth'] (6,0) -- (9.05,2.05);	
+	\node (B31) [region,label=above:$B_3$] at (8.75,0.85) {};
+	\draw[->, black!30, >=stealth'] (6,0) -- (9.05,2.05);
 	\draw[->, very thick, black!30, >=stealth'] (8.2,1.48) -- (9.05,2.05)
 		node[sloped, above, midway] {$TE$};
-	\draw[->, blue!30, >=stealth'] (6,0) -- (8,3.1);			
+	\draw[->, blue!30, >=stealth'] (6,0) -- (8,3.1);
 	\draw[->, very thick, blue!80, >=stealth'] (7.24,1.9) -- (8,3.1)
 		node[sloped, above, midway] {$TE_B$};
-	\draw[->, red!30, >=stealth'] (6,0) -- (10.2,1.6);	
+	\draw[->, red!30, >=stealth'] (6,0) -- (10.2,1.6);
 	\draw[->, very thick, red!80, >=stealth'] (9.18,1.22) -- (10.18,1.61)
 		node[sloped, above, midway] {$TE_A$};
-		
+
 	\begin{pgfonlayer}{background}
-		\node[backgroundB, fit =(B11)]{};	
-		\node[backgroundB, fit =(B21)]{};	
-		\node[backgroundB, fit =(B31)]{};					
-		\node[backgroundA, fit =(A11)]{};	
-		\node[backgroundA, fit =(A21)]{};	
-		\node[backgroundA, fit =(A31)]{};		
+		\node[backgroundB, fit =(B11)]{};
+		\node[backgroundB, fit =(B21)]{};
+		\node[backgroundB, fit =(B31)]{};
+		\node[backgroundA, fit =(A11)]{};
+		\node[backgroundA, fit =(A21)]{};
+		\node[backgroundA, fit =(A31)]{};
 	\end{pgfonlayer}
 \end{tikzpicture}
 \end{center}
@@ -148,13 +148,13 @@
 \begin{itemize}
 	\item Starting point: Weinstein (Technometrics, 1964)
 	\begin{itemize}
-		\item Econometric literature: Aigner et al. (1977); Meeusen \& van den Broeck (1977). 
+		\item Econometric literature: Aigner et al. (1977); Meeusen \& van den Broeck (1977).
 		\item Statistical literature: Azzalini (1985); Azzalini \& Capitanio (1999); Dominguez-Molina et al. (2003)
 	\end{itemize}
 	\pause
 	\item Regional stochastic frontiers: Puig-Junoy (2001); Alvarez (2007)
 	\pause
-	\item Recent literature concerning spatial stochastic frontiers: 
+	\item Recent literature concerning spatial stochastic frontiers:
 	\begin{itemize}
 		\item Parametric approach: Pavlyuk (2010); Barrios \& Lavado (2010); Fusco \& Vidoli (2013); Kinfu \& Sawhey (2015); Glass et al. (2016); Jiang et al. (2017)
 		\item Bayesian approach/sampling: Schmidt et al. (2009); Areal et al. (2012); Tsionas \& Michealides (2016)
@@ -166,7 +166,7 @@
 		\item \texttt{spfrontier}---Dmitry Pavlyuk (2016)
 	\end{itemize}
 \end{itemize}
-\end{frame} 
+\end{frame}
 
 \section{Spatial stochastic frontiers}
 
@@ -184,7 +184,7 @@ y = f(\mathbf{X};\beta)TE,
 Assume Cobb-Douglas and $TE = \exp(-\mu)$, then:
 %
 \begin{equation*}
-\ln y = \ln(\mathbf{X}) \beta 
+\ln y = \ln(\mathbf{X}) \beta
 \underbrace{
 -
 \tikz[baseline]{
@@ -205,11 +205,11 @@ Where usually:
 	\item $\mu \sim N^+ \left(0,\sigma^2_\mu\right)$ so $\mu \geq 0$
 	\item $\nu \sim N \left(0,\sigma^2_\nu\right)$
 \end{itemize}
-and $\nu$ and $\mu$ are independent of each other 
+and $\nu$ and $\mu$ are independent of each other
 \end{frame}
 
 \begin{frame}{Tradional (econometric) approach}
-	For likelihood purposes one usually considers the composite stochastic variable $\epsilon = \nu - \mu$ en then find the marginal density of $\epsilon$:
+	For likelihood purposes one usually considers the composite stochastic variable $\epsilon = \nu - \mu$ en then find the marginal density of $\epsilon$ (using $(\epsilon + \mu) \sim N \left(0,\sigma^2_\nu\right)$):
 	%
 	\begin{eqnarray*}
 	f(\epsilon)	&=& \int_0^\infty f(\mu, \epsilon)d\mu \notag\\
@@ -217,7 +217,7 @@ and $\nu$ and $\mu$ are independent of each other
 	\label{likelihood}
 	\end{eqnarray*}
 	%
-	Technical efficiencies can be retrieved by $f(\mu|\epsilon)$. 
+	Technical efficiencies can be retrieved by $f(\mu|\epsilon)$.
 \end{frame}
 
 \begin{frame}{Imposing spatial structure}
@@ -225,19 +225,19 @@ and $\nu$ and $\mu$ are independent of each other
 Note that $\mathbf{A} = \left(\mathbf{I} - \lambda\mathbf{W}\right)$ and $\mathbf{B} = \left(\mathbf{I} - \rho\mathbf{W}\right)$
 	\begin{enumerate}
 		\item Spatial dependence in technical efficiency component $\mu$
-		\begin{equation*}					
+		\begin{equation*}
 			\ln y = \ln(\mathbf{X}) \beta \underbrace{- \mathbf{A}^{-1}\mu + \nu}_\epsilon
 		\end{equation*}
 		\item Spatial dependence in error term $\nu$:
-		\begin{equation*}					
+		\begin{equation*}
 			\ln y = \ln(\mathbf{X}) \beta \underbrace{- u +  \mathbf{A}^{-1}\nu}_\epsilon
 		\end{equation*}
 		\item Spatial lag separate from technical efficiency component $\mu$
-		\begin{equation*}					
+		\begin{equation*}
 			\ln y =  \mathbf{B}^{-1}\left[\ln(\mathbf{X}) \beta\right] \underbrace{+ \mathbf{B}^{-1}\nu - \mu}_{\epsilon}
 		\end{equation*}
 		\item Spatial lag
-		\begin{equation*}					
+		\begin{equation*}
 			\ln y = \mathbf{B}^{-1}\left[\ln(\mathbf{X}) \beta \right]+  \underbrace{\mathbf{B}^{-1}\left[- \mu + \nu\right]}_\epsilon
 		\end{equation*}
 	\end{enumerate}
@@ -259,7 +259,7 @@ Note that $\mathbf{A} = \left(\mathbf{I} - \lambda\mathbf{W}\right)$ and $\mathb
 			\newline
 		\end{enumerate}
 		\pause
-		\item And is closed under affine transformations: 
+		\item And is closed under affine transformations:
 		\begin{itemize}
 			\item if $Y = \mathbf{X}\beta + \sigma Z$ then $Y \sim SN(\mathbf{X}\beta,\sigma, \alpha)$
 		\end{itemize}
@@ -269,7 +269,7 @@ Note that $\mathbf{A} = \left(\mathbf{I} - \lambda\mathbf{W}\right)$ and $\mathb
 \begin{frame}{Varying the shape parameter $\alpha$}
 \begin{figure}[h]
 	\center
-	\begin{tikzpicture} 
+	\begin{tikzpicture}
 	\begin{axis}[width=9cm]
 	\addplot[color=blue, dashed]
 	table[x=x,y=y1] {SkewNormalDensities.txt};
@@ -283,7 +283,7 @@ Note that $\mathbf{A} = \left(\mathbf{I} - \lambda\mathbf{W}\right)$ and $\mathb
 \begin{frame}{Varying the shape parameter $\alpha$}
 \begin{figure}[h]
 \center
-\begin{tikzpicture} 
+\begin{tikzpicture}
 \begin{axis}[width=9cm]
 \addplot[color=blue, dashed]
 table[x=x,y=y1] {SkewNormalDensities.txt};
@@ -299,7 +299,7 @@ table[x=x,y=y2] {SkewNormalDensities.txt};
 \begin{frame}{Varying the shape parameter $\alpha$}
 \begin{figure}[h]
 \center
-\begin{tikzpicture} 
+\begin{tikzpicture}
 \begin{axis}[width=9cm]
 \addplot[color=blue, dashed]
 table[x=x,y=y1] {SkewNormalDensities.txt};
@@ -317,7 +317,7 @@ table[x=x,y=y3] {SkewNormalDensities.txt};
 \begin{frame}{Varying the shape parameter $\alpha$}
 \begin{figure}[h]
 \center
-\begin{tikzpicture} 
+\begin{tikzpicture}
 \begin{axis}[width=9cm]
 \addplot[color=blue, dashed]
 table[x=x,y=y1] {SkewNormalDensities.txt};
@@ -337,7 +337,7 @@ table[x=x,y=y4] {SkewNormalDensities.txt};
 \begin{frame}{Varying the shape parameter $\alpha$}
 \begin{figure}[h]
 \center
-\begin{tikzpicture} 
+\begin{tikzpicture}
 \begin{axis}[width=9cm]
 \addplot[color=blue, dashed]
 table[x=x,y=y1] {SkewNormalDensities.txt};
@@ -378,29 +378,17 @@ then:
 \begin{block}{For the spatial error model}
 	If the model is: $\ln y = \ln(\mathbf{X}) \beta \underbrace{- \mu +  \mathbf{A}^{-1}\nu}_\epsilon$ then
 	\begin{equation*}
-	\epsilon  \sim SN(\ln y - \ln(\mathbf{X}) \beta, \sigma^2 (\mathbf{A}^t \mathbf{A})^{-1}, \alpha)
+	\epsilon  \sim SN(\ln y - \ln(\mathbf{X}) \beta, \sigma^2 \mathbf{A}^{-1} (\mathbf{A}^{-1})^t, \alpha)
 	\end{equation*}
 \end{block}
 
 \begin{block}{For the spatial ``lag'' model}
 	If the model is: $\ln y =  \mathbf{B}^{-1}\left[\ln(\mathbf{X}) \beta\right] \underbrace{ - \mu+ \mathbf{B}^{-1}\nu}_{\epsilon}$ then:
 	\begin{equation*}
-		\epsilon \sim  SN(\mathbf{B}^{-1}(\ln y - \mathbf{X}\beta), \sigma^2 (\mathbf{B}^t \mathbf{B})^{-1}, \alpha)
+		\epsilon \sim  SN(\mathbf{B}^{-1}(\ln y - \mathbf{X}\beta), \sigma^2 \mathbf{B}^{-1}(\mathbf{B}^{-1})^t, \alpha)
 	\end{equation*}
 \end{block}
 
-
-\end{frame}
-
-\section{Simulation}
-
-\subsection{Simulation}
-
-\begin{frame}{Simulation set-up}
-
-\end{frame}
-
-\begin{frame}{Simulation results}
 
 \end{frame}
 
@@ -411,7 +399,7 @@ then:
 \begin{frame}{Regional production function data}
 \begin{itemize}
 	\item Cambridge Econometrics Dataset for Employment
-	\item Regional value added and capital stock from regional supply and use framework (Thissen et al. 20013a, 2013b and 2013c) 
+	\item Regional value added and capital stock from regional supply and use framework (Thissen et al. 20013a, 2013b and 2013c)
 	\begin{itemize}
 		\item Regional trade database between 256 European Nuts2 regions over 15 sectors (2000--2010)
 		\item No Perpetual Inventory Method but value added for capital $\rightarrow$ Using country specific interest rates we can then find capital stock ($VA^{capital} = rK$)
